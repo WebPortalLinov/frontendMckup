@@ -1,5 +1,5 @@
 <p-toast position="top-right"></p-toast>
-<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" (reset)="onRevert()" class="sign-in">
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" (reset)="onRevert()" class="sign-in mx-auto" style="margin-top: -7vh;">
     <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid form-signin">
         <div class="ui-grid-row my-2">
             <div class="ui-grid-col-12">
@@ -58,7 +58,7 @@
                 </div>
             </div>
         </div>
-        <div class="ui-grid-row my-2">
+        <div class="ui-grid-row my-2" style="height: 3vh;">
             <div class="ui-g-12">
                 <button [ladda]="isLoading" [disabled]="loginForm.invalid" type="submit"
                     class="btn btn-primary btn-sm btn-login" style="width: 100%;">
@@ -66,12 +66,12 @@
                 </button>
             </div>
         </div>
-        <div class="ui-grid-row my-3">
+        <div class="ui-grid-row my-3" style="height: 3vh;">
             <div class="ui-grid-col-12">
                 <hr class="middle">
             </div>
         </div>
-        <div class="ui-grid-row my-3">
+        <div class="ui-grid-row my-3" style="height: 3vh;">
             <div class="ui-grid-col-12">
                 <p class="sub-title">Sign In Using Account</p>
             </div>
@@ -79,23 +79,23 @@
         <div class="ui-grid-row my-2">
             <div class="ui-grid-col-12">
                 <button class="btn btn-primary btn-sm btn-login" style="width: 100%;">
-                    <i class=""></i> Facebook
+                    <i class="pi pi-facebook"></i>&nbsp; Facebook
                 </button>
             </div>
         </div>
-        <div class="ui-grid-row my-2">
+        <div class="ui-grid-row my-2" style="height: 2vh;">
             <div class="ui-grid-col-12">
                 <button class="btn btn-primary btn-sm btn-login" style="width: 100%">
-                    <i class=""></i> Google
+                    <i class="pi pi-google"></i>&nbsp; Google
                 </button>
             </div>
         </div>
-        <div class="ui-grid-row my-2">
+        <div class="ui-grid-row my-2" style="height: 2vh;">
             <div class="ui-grid-col-12">
                 <hr class="end">
             </div>
         </div>
-        <div class="ui-grid-row my-3">
+        <div class="ui-grid-row my-3" style="height: 5vh;">
             <div class="ui-grid-col-12">
                 <div class="ui-g-9">
                     Don't have a LinovHR account yet?

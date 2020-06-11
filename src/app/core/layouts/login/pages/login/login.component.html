@@ -4,7 +4,7 @@
         aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <a [routerLink]="'/dashboard'" class="navbar-brand ml-2rem-mr-7rem">
+    <a [routerLink]="'/home'" class="navbar-brand ml-2rem-mr-7rem">
         <img class="logo" src="assets/images/logo.svg" style="height: 35px;" />
         <!-- Linov<strong>HR</strong> -->
     </a>
@@ -15,11 +15,11 @@
             </li>
         </ul>
     </div>
-    <a [routerLink]="'/dashboard'" class="navbar-brand ml-2rem-mr-7rem" style="width: 5px; font-size:1rem;">
+    <a [routerLink]="'/home/register'" class="navbar-brand ml-2rem-mr-7rem" style="width: 5px; font-size:1rem;">
         <i class="pi pi-user-plus"></i>
         Sign Up
     </a>
-    <a [routerLink]="'/dashboard'" class="navbar-brand ml-2rem-mr-7rem" style="width: 5px; font-size: 1rem;">
+    <a [routerLink]="'/home/login'" class="navbar-brand ml-2rem-mr-7rem" style="width: 5px; font-size: 1rem;">
         <i class="pi pi-sign-in"></i>
         Sign In
     </a>
@@ -29,7 +29,7 @@
 <div class="login-page">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-6 mx-auto p-0">
+            <div class="col-lg-12 col-md-12 col-sm-12 p-0">
                 <router-outlet *ngIf="isDesktop"></router-outlet>
 
                 <p-card
