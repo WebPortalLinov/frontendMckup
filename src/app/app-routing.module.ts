@@ -51,6 +51,7 @@ import { ResetPasswordComponent } from './core/layouts/login/components/reset-pa
 
 import { AuthGuard } from './core/guards/auth.guard';
 import { HomeComponent } from './core/layouts/login/home/home.component';
+import { MyappListComponent } from './core/layouts/login/my-applications/myapp-list/myapp-list.component';
 
 const routes: Routes = [
     // TopBar Routes
@@ -71,6 +72,7 @@ const routes: Routes = [
             {
                 path: 'login',
                 component: SignInComponent,
+
             },
             {
                 path: 'register',
@@ -88,11 +90,17 @@ const routes: Routes = [
     },
 
    
-    // {
-    //     path: 'forgot-password',
-    //     component: ForgotPasswordComponent,
-    //     data: { title: ':: Epic ::' },
-    // },
+    {
+        path: 'my-applications',
+        component: MyappListComponent,
+        data: { title: ':: Epic ::' },
+        children: [{
+            path: 'list',
+            component: MyappListComponent,
+        }
+        ]
+        
+    },
     {
         path: 'page-not-found',
         component: PageNotFoundComponent,
