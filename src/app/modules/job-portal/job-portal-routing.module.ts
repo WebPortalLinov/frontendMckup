@@ -25,6 +25,9 @@ const routes: Routes = [
     }
   ]
   },
+
+
+
   {
     path:'my-applications',
     component: MyApplicationsComponent,
