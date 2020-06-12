@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyProfileComponent implements OnInit {
 
-  constructor() { }
+  completion: any
+
+  constructor() { 
+    this.completion = {
+      datasets: [
+        {
+          data: [55, 45],
+          backgroundColor: [
+            "#36A2EB",
+            "#C0C0C0"
+          ]
+        }
+      ]
+    }
+  }
 
   ngOnInit() {
   }
-
 }

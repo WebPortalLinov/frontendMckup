@@ -461,7 +461,7 @@ export class HeaderComponent implements OnInit {
         this.apiService.delete('logout').subscribe();
         this.authService.destroySession();
         this.authService.destroyActionSession();
-        this.router.navigate(['login']);
+        this.router.navigate(['home']);
     }
     trySocket: number = 0;
     _connect() {

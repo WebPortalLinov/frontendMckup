@@ -11,7 +11,13 @@ declare var $: any;
     styleUrls: ['menu.component.sass'],
 })
 export class MenuComponent implements OnInit {
-    @Input() modules: Module[];
+    @Input() modules: any[] = [
+        {name:"Job Vacancy",icon:"fas fa-toolbox",path:"/job-vacancy"},
+        {name:"My Profile",icon:"fas fa-user",path:"/my-profile"},
+        {name:"My Application",icon:"fas fa-file-text",path:"/job-vacancy"},
+        {name:"Saved Jobs",icon:"fas fa-heart",path:"/job-vacancy"},
+        {name:"Job Alert",icon:"fas fa-bell",path:"/job-vacancy"},
+    ]
 
     isActive = false;
     menuSelect: string;

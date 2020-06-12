@@ -90,25 +90,6 @@ const routes: Routes = [
             },
         ],
     },
-
-    {
-        path:'job-vacancy',
-        component:JobVacancyComponent,
-        children:[
-        {
-            path:'',
-            component:JobVacancyListComponent,
-        },
-        {
-            path:':uuid',
-            component:JobVacancyDetailComponent,
-        }
-      ]
-    },
-    {
-        path:'my-profile',
-        component:MyProfileComponent,
-    },
     // {
     //     path: 'forgot-password',
     //     component: ForgotPasswordComponent,
