@@ -4,6 +4,10 @@ import { JobVacancyComponent } from '../job-vacancy/job-vacancy/job-vacancy.comp
 import { JobVacancyListComponent } from '../job-vacancy/job-vacancy-list/job-vacancy-list.component';
 import { JobVacancyDetailComponent } from '../job-vacancy/job-vacancy-detail/job-vacancy-detail.component';
 import { MyProfileComponent } from '../my-profile/my-profile/my-profile.component';
+import { MyApplicationsListComponent } from '../my-applications/my-applications-list/my-applications-list.component';
+import { MyApplicationsDetailComponent } from '../my-applications/my-applications-detail/my-applications-detail.component';
+import { MyApplicationsComponent } from '../my-applications/my-applications/my-applications.component';
+import { JobAlertListComponent } from '../job-alert/job-alert-list/job-alert-list.component';
 
 
 const routes: Routes = [
@@ -22,8 +26,26 @@ const routes: Routes = [
   ]
   },
   {
+    path:'my-applications',
+    component: MyApplicationsComponent,
+    children:[
+        {
+            path: '',
+            component:MyApplicationsListComponent,
+        },
+        {
+            path:':uuid',
+            component: MyApplicationsDetailComponent,
+        }
+    ]
+  },
+  {
     path:'my-profile',
     component:MyProfileComponent,
+  },
+  {
+    path:'job-alert',
+    component:JobAlertListComponent,
   }
 ];
 

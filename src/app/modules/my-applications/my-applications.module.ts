@@ -2,14 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MyApplicationsListComponent } from './my-applications-list/my-applications-list.component';
 import { MyApplicationsDetailComponent } from './my-applications-detail/my-applications-detail.component';
-import {MultiSelectModule} from 'primeng/multiselect';
+import { MyApplicationsComponent } from './my-applications/my-applications.component';
 
 
 @NgModule({
-  declarations: [MyApplicationsListComponent, MyApplicationsDetailComponent],
+  declarations: [MyApplicationsListComponent, MyApplicationsDetailComponent, MyApplicationsComponent],
   imports: [
-    CommonModule,
-    MultiSelectModule
+    CommonModule
   ]
 })
 export class MyApplicationsModule { }

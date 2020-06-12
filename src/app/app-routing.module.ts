@@ -55,6 +55,10 @@ import { JobVacancyComponent } from './modules/job-vacancy/job-vacancy/job-vacan
 import { JobVacancyListComponent } from './modules/job-vacancy/job-vacancy-list/job-vacancy-list.component';
 import { JobVacancyDetailComponent } from './modules/job-vacancy/job-vacancy-detail/job-vacancy-detail.component';
 import { MyProfileComponent } from './modules/my-profile/my-profile/my-profile.component';
+import { MyApplicationsModule } from './modules/my-applications/my-applications.module';
+import { MyApplicationsListComponent } from './modules/my-applications/my-applications-list/my-applications-list.component';
+import { MyApplicationsDetailComponent } from './modules/my-applications/my-applications-detail/my-applications-detail.component';
+import { MyApplicationsComponent } from './modules/my-applications/my-applications/my-applications.component';
 
 
 const routes: Routes = [
@@ -107,6 +111,21 @@ const routes: Routes = [
         }
       ]
     },
+    {
+        path:'my-applications',
+        component: MyApplicationsComponent,
+        children:[
+            {
+                path: '',
+                component:MyApplicationsListComponent,
+            },
+            {
+                path:':uuid',
+                component: MyApplicationsDetailComponent,
+            }
+        ]
+    },
+
     {
         path:'my-profile',
         component:MyProfileComponent,

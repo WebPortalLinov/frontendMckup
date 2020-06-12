@@ -6,11 +6,12 @@ import { SelectItemGroup } from 'primeng/components/common/selectitemgroup';
 import { onConstructTableHeader } from 'app/shared/utils/construct-table-header';
 
 @Component({
-  selector: 'app-my-applications-list',
-  templateUrl: './my-applications-list.component.html',
-  styleUrls: ['./my-applications-list.component.scss']
+  selector: 'app-my-applications',
+  templateUrl: './my-applications.component.html',
+  styleUrls: ['./my-applications.component.scss']
 })
-export class MyApplicationsListComponent implements OnInit {
+export class MyApplicationsComponent implements OnInit {
+
   myAppDetailsColumn: TableColumn[];
   rowsPerPage = Paginator.rowsPerPage;
   rowsPerPageOptions = Paginator.rowsPerPageOptions;
@@ -50,4 +51,5 @@ export class MyApplicationsListComponent implements OnInit {
 
   ngOnInit(){ 
   }
+
 }
