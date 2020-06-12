@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { JobPortalRoutingModule } from './job-portal-routing.module';
 import { JobVacancyModule } from '../job-vacancy/job-vacancy.module';
+import { MyProfileModule } from '../my-profile/my-profile.module';
 
 
 @NgModule({
@@ -10,7 +11,8 @@ import { JobVacancyModule } from '../job-vacancy/job-vacancy.module';
   imports: [
     CommonModule,
     JobPortalRoutingModule,
-    JobVacancyModule
+    JobVacancyModule,
+    MyProfileModule,
   ]
 })
 export class JobPortalModule { }

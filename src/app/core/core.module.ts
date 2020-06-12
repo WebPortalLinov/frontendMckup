@@ -108,6 +108,7 @@ import {
 } from '@effects/notification.effect';
 import { RecruitmentMppService } from '@core-service/recruitment-mpp.service';
 import { RecruitmentMainJobVacancyAllService } from '@core-service/recruitment-main-jobvacancy-all.service';
+import { JobPortalModule } from 'app/modules/job-portal/job-portal.module';
 
 // TODO: optimize later or remove later
 export {
@@ -191,6 +192,7 @@ export const interceptorProviders = [{
         ErrorModule,
         LoginModule,
         HomeModule,
+        JobPortalModule,
     ],
     declarations: [],
     providers: [LoaderService, MessageService, interceptorProviders],
