@@ -119,7 +119,7 @@ export class SignInComponent implements OnInit {
                     this.authService.createGeneralSetting(resp);
                 })
 
-                this.router.navigate(['/dashboard']);
+                this.router.navigate(['/job-vacancy']);
             },
             (err) => {
                 this.errorMsg = err;

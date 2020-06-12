@@ -51,7 +51,11 @@ import { ResetPasswordComponent } from './core/layouts/login/components/reset-pa
 
 import { AuthGuard } from './core/guards/auth.guard';
 import { HomeComponent } from './core/layouts/login/home/home.component';
-import { MyappListComponent } from './core/layouts/login/my-applications/myapp-list/myapp-list.component';
+import { JobVacancyComponent } from './modules/job-vacancy/job-vacancy/job-vacancy.component';
+import { JobVacancyListComponent } from './modules/job-vacancy/job-vacancy-list/job-vacancy-list.component';
+import { JobVacancyDetailComponent } from './modules/job-vacancy/job-vacancy-detail/job-vacancy-detail.component';
+import { MyProfileComponent } from './modules/my-profile/my-profile/my-profile.component';
+
 
 const routes: Routes = [
     // TopBar Routes
@@ -89,18 +93,29 @@ const routes: Routes = [
         ],
     },
 
-   
     {
-        path: 'my-applications',
-        component: MyappListComponent,
-        data: { title: ':: Epic ::' },
-        children: [{
-            path: 'list',
-            component: MyappListComponent,
+        path:'job-vacancy',
+        component:JobVacancyComponent,
+        children:[
+        {
+            path:'',
+            component:JobVacancyListComponent,
+        },
+        {
+            path:':uuid',
+            component:JobVacancyDetailComponent,
         }
-        ]
-        
+      ]
     },
+    {
+        path:'my-profile',
+        component:MyProfileComponent,
+    },
+    // {
+    //     path: 'forgot-password',
+    //     component: ForgotPasswordComponent,
+    //     data: { title: ':: Epic ::' },
+    // },
     {
         path: 'page-not-found',
         component: PageNotFoundComponent,

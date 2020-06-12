@@ -3,22 +3,27 @@ import { Routes, RouterModule } from '@angular/router';
 import { JobVacancyComponent } from '../job-vacancy/job-vacancy/job-vacancy.component';
 import { JobVacancyListComponent } from '../job-vacancy/job-vacancy-list/job-vacancy-list.component';
 import { JobVacancyDetailComponent } from '../job-vacancy/job-vacancy-detail/job-vacancy-detail.component';
+import { MyProfileComponent } from '../my-profile/my-profile/my-profile.component';
 
 
 const routes: Routes = [
   {
     path:'job-vacancy',
     component:JobVacancyComponent,
-    children:[{
+    children:[
+    {
       path:'',
       component:JobVacancyListComponent,
     },
     {
       path:':uuid',
-      component:JobVacancyDetailComponent
+      component:JobVacancyDetailComponent,
     }
-    
   ]
+  },
+  {
+    path:'my-profile',
+    component:MyProfileComponent,
   }
 ];
 
