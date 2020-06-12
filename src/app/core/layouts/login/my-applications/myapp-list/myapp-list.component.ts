@@ -4,6 +4,7 @@ import { onConstructTableHeader } from 'app/shared/utils/construct-table-header'
 import { Paginator } from 'app/configs/paginator.config';
 import { FormGroup } from '@angular/forms';
 import { SelectItemGroup } from 'primeng/api';
+import { Company } from 'app/core/models/company';
 
 @Component({
   selector: 'app-myapp-list',
@@ -16,6 +17,8 @@ export class MyappListComponent implements OnInit {
   rowsPerPageOptions = Paginator.rowsPerPageOptions;
   formReady: FormGroup;
   moveTo: SelectItemGroup[];
+  myAppData: Company[];
+  cols: any[];
 
   constructor() {
 
@@ -25,6 +28,13 @@ export class MyappListComponent implements OnInit {
       'Progress',
       'Withdraw',
     ]),
+    this.cols = [
+      { field: 'vin', value: 'Vin' },
+      { field: 'year', value: 'Year' },
+      { field: 'brand', value: 'Brand' },
+      { field: 'color', value: 'Color' }
+    ];
+
     this.moveTo = [
       {
           label: 'Move', 
@@ -39,7 +49,7 @@ export class MyappListComponent implements OnInit {
     ];
    }
 
-  ngOnInit() {
+  ngOnInit(){ 
   }
 
 }
