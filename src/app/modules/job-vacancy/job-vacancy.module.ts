@@ -4,16 +4,23 @@ import { JobVacancyListComponent } from './job-vacancy-list/job-vacancy-list.com
 import { JobVacancyDetailComponent } from './job-vacancy-detail/job-vacancy-detail.component';
 import { JobVacancyComponent } from './job-vacancy/job-vacancy.component';
 import { MultiSelectModule } from 'primeng/primeng';
-import {TableModule} from 'primeng/table';
-
-
+import { TableModule } from 'primeng/table';
+import { ButtonModule } from 'primeng/button';
+import { PaginatorModule } from 'primeng/paginator';
+import { DialogModule, CardModule, PanelModule, CarouselModule } from 'primeng/primeng';
 
 @NgModule({
   declarations: [JobVacancyListComponent, JobVacancyDetailComponent, JobVacancyComponent],
   imports: [
     CommonModule,
     MultiSelectModule,
-    TableModule
+    TableModule,
+    ButtonModule,
+    PaginatorModule,
+    DialogModule,
+    CardModule,
+    PanelModule,
+    CarouselModule
   ]
 })
 export class JobVacancyModule { }
