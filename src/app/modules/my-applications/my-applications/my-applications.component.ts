@@ -19,7 +19,7 @@ export class MyApplicationsComponent implements OnInit {
   moveTo: SelectItemGroup[];
   myAppData: any[];
   cols: any[];
-
+  display: boolean = false;
   constructor() {
 
     this.myAppDetailsColumn = onConstructTableHeader([
@@ -50,6 +50,10 @@ export class MyApplicationsComponent implements OnInit {
    }
 
   ngOnInit(){ 
+  }
+
+  showDialog() {
+    this.display = true;
   }
 
 }

@@ -8,6 +8,7 @@ import { JobAlertModule } from '../job-alert/job-alert.module';
 import { SharedModule } from 'app/shared/shared.module';
 
 
+
 @NgModule({
   declarations: [],
   imports: [

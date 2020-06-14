@@ -37,10 +37,14 @@ const routes: Routes = [
             component:MyApplicationsListComponent,
         },
         {
-            path:':uuid',
+            path:'detail',
             component: MyApplicationsDetailComponent,
         }
     ]
+  },
+  {
+    path:'detail',
+    component:MyApplicationsDetailComponent
   },
   {
     path:'my-profile',
