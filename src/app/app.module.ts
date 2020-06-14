@@ -67,6 +67,7 @@ import { PageProfileComponent } from './components/Topbar/page-profile/page-prof
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
 import { LoaderModule } from './core/layouts/loader/loader.module';
+import {TableModule} from 'primeng/table';
 
 export const createTranslateLoader = (http: HttpClient) => {
     return new TranslateHttpLoader(http, '../translations/', '.json');
@@ -122,7 +123,7 @@ export const createTranslateLoader = (http: HttpClient) => {
         FileManagerComponent,
         PageSearchComponent,
         AppSettingComponent,
-        PageProfileComponent,
+        PageProfileComponent
     ],
     imports: [
         BrowserModule,
@@ -135,6 +136,7 @@ export const createTranslateLoader = (http: HttpClient) => {
         RichTextEditorAllModule,
         FullCalendarModule,
         NgApexchartsModule,
+        TableModule,
         AgmCoreModule.forRoot({
             apiKey: '',
         }),

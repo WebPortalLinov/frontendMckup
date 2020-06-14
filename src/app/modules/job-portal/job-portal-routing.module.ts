@@ -8,6 +8,7 @@ import { MyApplicationsListComponent } from '../my-applications/my-applications-
 import { MyApplicationsDetailComponent } from '../my-applications/my-applications-detail/my-applications-detail.component';
 import { MyApplicationsComponent } from '../my-applications/my-applications/my-applications.component';
 import { JobAlertListComponent } from '../job-alert/job-alert-list/job-alert-list.component';
+import { SavedJobsComponent } from '../saved-jobs/saved-jobs/saved-jobs.component';
 
 
 const routes: Routes = [
@@ -25,9 +26,6 @@ const routes: Routes = [
     }
   ]
   },
-
-
-
   {
     path:'my-applications',
     component: MyApplicationsComponent,
@@ -51,9 +49,13 @@ const routes: Routes = [
     component:MyProfileComponent,
   },
   {
+    path:'saved-jobs',
+    component:SavedJobsComponent,
+  },
+  {
     path:'job-alert',
     component:JobAlertListComponent,
-  }
+  },
 ];
 
 @NgModule({

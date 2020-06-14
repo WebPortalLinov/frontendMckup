@@ -4,6 +4,7 @@ import { JobVacancyListComponent } from './job-vacancy-list/job-vacancy-list.com
 import { JobVacancyDetailComponent } from './job-vacancy-detail/job-vacancy-detail.component';
 import { JobVacancyComponent } from './job-vacancy/job-vacancy.component';
 import { MultiSelectModule } from 'primeng/primeng';
+import {TableModule} from 'primeng/table';
 
 
 
@@ -12,6 +13,7 @@ import { MultiSelectModule } from 'primeng/primeng';
   imports: [
     CommonModule,
     MultiSelectModule,
+    TableModule
   ]
 })
 export class JobVacancyModule { }

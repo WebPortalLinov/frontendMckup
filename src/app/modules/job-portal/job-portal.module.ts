@@ -5,6 +5,7 @@ import { JobVacancyModule } from '../job-vacancy/job-vacancy.module';
 import { MyProfileModule } from '../my-profile/my-profile.module';
 import { MyApplicationsModule } from '../my-applications/my-applications.module';
 import { JobAlertModule } from '../job-alert/job-alert.module';
+import { SavedJobsModule } from '../saved-jobs/saved-jobs.module';
 import { SharedModule } from 'app/shared/shared.module';
 
 
@@ -17,7 +18,8 @@ import { SharedModule } from 'app/shared/shared.module';
     JobVacancyModule,
     MyProfileModule,
     MyApplicationsModule,
-    JobAlertModule
+    JobAlertModule,
+    SavedJobsModule
   ]
 })
 export class JobPortalModule { }

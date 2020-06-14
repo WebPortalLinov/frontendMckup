@@ -109,6 +109,7 @@ import {
 import { RecruitmentMppService } from '@core-service/recruitment-mpp.service';
 import { RecruitmentMainJobVacancyAllService } from '@core-service/recruitment-main-jobvacancy-all.service';
 import { JobPortalModule } from 'app/modules/job-portal/job-portal.module';
+import {TableModule} from 'primeng/table';
 
 // TODO: optimize later or remove later
 export {
@@ -156,7 +157,7 @@ export const interceptorProviders = [{
     imports: [
         CommonModule, // Common Angular
         HttpClientModule, // HttpClient Angular
-
+        TableModule,
         // TODO: move later to appReducer
         // StoreModule.forRoot({
         //     companies: reducer,
