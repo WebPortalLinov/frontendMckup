@@ -8,10 +8,10 @@
                         'fa-angle-double-left': isActive == true,
                         'fa-angle-double-right': isActive == false
                     }" id="collapse-icon" class="fa fa-1x mr-3 fa-angle-double-left"></span>
-                <!-- <span id="collapse-text" class="menu-collapsed">{{ 'collapse' | translate }}</span> -->
+                <span id="collapse-text" class="menu-collapsed">{{ 'collapse' | translate }}</span>
             </div>
         </a>
-    </div><br>
+    </div>
 
     <a [routerLink]="menu.path" (click)="menuClick(menu.path)" [ngClass]=" menu.border ? 'is-active' : ''"
         class="bg-white list-group-item list-group-item-action flex-column align-items-start">

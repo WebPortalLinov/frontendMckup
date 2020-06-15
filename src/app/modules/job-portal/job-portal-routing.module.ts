@@ -9,6 +9,7 @@ import { MyApplicationsDetailComponent } from '../my-applications/my-application
 import { MyApplicationsComponent } from '../my-applications/my-applications/my-applications.component';
 import { JobAlertListComponent } from '../job-alert/job-alert-list/job-alert-list.component';
 import { SavedJobsComponent } from '../saved-jobs/saved-jobs/saved-jobs.component';
+import { AccountSettingsComponent } from '../account-setting/account-settings/account-settings.component';
 
 
 const routes: Routes = [
@@ -56,6 +57,10 @@ const routes: Routes = [
     path:'job-alert',
     component:JobAlertListComponent,
   },
+  {
+    path:'account-settings',
+    component:AccountSettingsComponent,
+  }
 ];
 
 @NgModule({
