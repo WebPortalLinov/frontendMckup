@@ -1,0 +1,100 @@
+<div class="ui-g">
+    <div class="ui-grid-row ui-g-12 mx-2">
+        <h2>Account Setting</h2>
+    </div>
+    <div class="ui-grid-row ui-g-12">
+        <div class="ui-g-12">
+            <p-card header="{{ 'Email' }}" styleClass="ui-card--workforce mb-3" class="border-title">
+                <div class="ui-g">
+                    <div class="ui-g-12 p-0">
+                        <div class="ui-grid-row" style="font-weight: bold;">
+                            Current Email Address
+                        </div>
+                        <div class="ui-grid-row mb-3">
+                            john.doe@gmail.com
+                        </div>
+                        <div class="ui-grid-row mb-0">
+                            <label>Current Password</label>
+                        </div>
+                        <div class="ui-grid-row mb-2">
+                            <input type="password" style="width: 30%;">
+                        </div>
+                        <div class="ui-grid-row mb-0">
+                            <label>New Email Address</label>
+                        </div>
+                        <div class="ui-grid-row mb-4">
+                            <input type="email" style="width: 30%;" placeholder="myemail@email.com">
+                        </div>
+                    </div>
+                </div>
+            </p-card>
+        </div>
+    </div>
+    <div class="ui-grid-row ui-g-12">
+        <div class="ui-g-12">
+            <p-card header="{{ 'Mobile Number' }}" styleClass="ui-card--workforce mb-3" class="border-title">
+                <div class="ui-g">
+                    <div class="ui-g-12 p-0">
+                        <div class="ui-grid-row">
+                            Enter Mobile Number
+                        </div>
+                        <div class="ui-grid-row mb-4">
+                            <div class="ui-g-3">
+                                <p-autoComplete [(ngModel)]="countryCode" [(suggestions)]="results" (completeMethod)="search($event)" [dropdown]="true" placeholder="Country Code">
+                                    <ng-template let-countryCode pTemplate="item">
+                                        <div class="ui-helper-clearfix">
+                                            {{countryCode}}
+                                        </div>
+                                    </ng-template>
+                                </p-autoComplete>
+                            </div>
+                            <div class="ui-g-9">
+                                <input type="text" style="width: 30%;">
+                            </div>
+                        </div>
+                        <div class="ui-grid-row mb-5">
+                            Your mobile number will be used to send important updates on your applications, and allow recruiters to contact you and invite you to interviews.
+                        </div>
+                    </div>
+                </div>
+            </p-card>
+        </div>
+    </div>
+    <div class="ui-grid-row ui-g-12">
+        <div class="ui-g-12">
+            <p-card header="{{ 'Password' }}" styleClass="ui-card--workforce mb-3" class="border-title">
+                <div class="ui-g">
+                    <div class="ui-g-12 p-0">
+                        <div class="ui-grid-row my-3">
+                            To change your password, please complete the following fields.
+                        </div>
+                        <div class="ui-grid-row my-1">
+                            <div class="ui-grid-row my-0">
+                                <label>Old Password</label>
+                            </div>
+                            <div class="ui-grid-row my-0">
+                                <input type="password" style="width: 30%;">
+                            </div>
+                        </div>
+                        <div class="ui-grid-row my-1">
+                            <div class="ui-grid-row my-0">
+                                <label>New Password</label>
+                            </div>
+                            <div class="ui-grid-row my-0">
+                                <input type="password" style="width: 30%;">
+                            </div>
+                        </div>
+                        <div class="ui-grid-row my-1 mb-3">
+                            <div class="ui-grid-row my-0">
+                                <label>Retype New Password</label>
+                            </div>
+                            <div class="ui-grid-row my-0">
+                                <input type="password" style="width: 30%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </p-card>
+        </div>
+    </div>
+</div>
