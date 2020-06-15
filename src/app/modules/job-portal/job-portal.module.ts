@@ -7,6 +7,7 @@ import { MyApplicationsModule } from '../my-applications/my-applications.module'
 import { JobAlertModule } from '../job-alert/job-alert.module';
 import { SavedJobsModule } from '../saved-jobs/saved-jobs.module';
 import { SharedModule } from 'app/shared/shared.module';
+import { AccountSettingModule } from '../account-setting/account-setting.module';
 
 
 
@@ -19,7 +20,8 @@ import { SharedModule } from 'app/shared/shared.module';
     MyProfileModule,
     MyApplicationsModule,
     JobAlertModule,
-    SavedJobsModule
+    SavedJobsModule,
+    AccountSettingModule,
   ]
 })
 export class JobPortalModule { }

@@ -68,6 +68,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
 import { LoaderModule } from './core/layouts/loader/loader.module';
 import {TableModule} from 'primeng/table';
+import { AccountSettingsComponent } from './modules/account-setting/account-settings/account-settings.component';
 
 export const createTranslateLoader = (http: HttpClient) => {
     return new TranslateHttpLoader(http, '../translations/', '.json');
@@ -123,7 +124,8 @@ export const createTranslateLoader = (http: HttpClient) => {
         FileManagerComponent,
         PageSearchComponent,
         AppSettingComponent,
-        PageProfileComponent
+        PageProfileComponent,
+        
     ],
     imports: [
         BrowserModule,

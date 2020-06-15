@@ -23,6 +23,23 @@ body{
     top: 107%;
 }
 
-.conGetEmail{
-  
+.fit-picture {
+        width: fit-content;
+        height: fit-content;
 }
+    
+.detail-job {
+        font-size: small;
+}
+
+.fontSize{
+        font-size: 10px;
+}
+
+.ui-corner-all {
+        border-radius: 30px;
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+            border-bottom-left-radius: 3px;
+    }
