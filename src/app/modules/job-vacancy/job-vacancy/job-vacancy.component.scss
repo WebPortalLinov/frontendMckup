@@ -35,3 +35,11 @@ body{
 .fontSize{
         font-size: 10px;
 }
+
+.ui-corner-all {
+        border-radius: 30px;
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+            border-bottom-left-radius: 3px;
+    }
