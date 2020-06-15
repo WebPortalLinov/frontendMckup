@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
-import { CardModule, ChartModule, CheckboxModule, DropdownModule, DialogModule, PasswordModule, AutoCompleteModule } from 'primeng/primeng';
+import { CardModule, ChartModule, CheckboxModule, DropdownModule, DialogModule, PasswordModule, AutoCompleteModule, ButtonModule } from 'primeng/primeng';
 import { TableModule } from 'primeng/table';
 import { FormsModule } from '@angular/forms';
 
@@ -19,7 +19,8 @@ import { FormsModule } from '@angular/forms';
     DropdownModule,
     DialogModule,
     PasswordModule,
-    AutoCompleteModule
+    AutoCompleteModule,
+    ButtonModule
   ]
 })
 export class AccountSettingModule { }
