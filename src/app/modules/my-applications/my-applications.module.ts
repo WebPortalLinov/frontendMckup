@@ -5,7 +5,7 @@ import { MyApplicationsDetailComponent } from './my-applications-detail/my-appli
 import { MyApplicationsComponent } from './my-applications/my-applications.component';
 import { ButtonModule } from 'primeng/button';
 import { PaginatorModule } from 'primeng/paginator';
-import { DialogModule, CardModule, PanelModule, CarouselModule } from 'primeng/primeng';
+import { DialogModule, CardModule, PanelModule, CarouselModule, StepsModule } from 'primeng/primeng';
 
 @NgModule({
   declarations: [MyApplicationsListComponent, MyApplicationsDetailComponent, MyApplicationsComponent],
@@ -16,6 +16,7 @@ import { DialogModule, CardModule, PanelModule, CarouselModule } from 'primeng/p
     CardModule,
     PanelModule,
     CarouselModule,
+    StepsModule,
     ButtonModule
   ]
 })

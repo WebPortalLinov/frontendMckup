@@ -11,8 +11,6 @@ import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { CheckboxModule } from 'primeng/primeng';
 import { HeaderService } from '../home/components/header/shared/header.service';
-import { MyappDetailComponent } from './my-applications/myapp-detail/myapp-detail.component';
-import { MyappListComponent } from './my-applications/myapp-list/myapp-list.component';
 
 @NgModule({
     imports: [SharedModule, LaddaModule, CheckboxModule],
@@ -23,8 +21,6 @@ import { MyappListComponent } from './my-applications/myapp-list/myapp-list.comp
         ResetPasswordComponent,
         HomeComponent,
         RegisterComponent,
-        MyappDetailComponent,
-        MyappListComponent,
     ],
     providers: [],
 })

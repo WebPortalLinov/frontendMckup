@@ -20,6 +20,9 @@ export class MyApplicationsComponent implements OnInit {
   myAppData: any[];
   cols: any[];
   display: boolean = false;
+  item: any[];
+  activeIndex: number = 1;
+
   constructor() {
 
     this.myAppDetailsColumn = onConstructTableHeader([
@@ -49,7 +52,24 @@ export class MyApplicationsComponent implements OnInit {
     ];
    }
 
-  ngOnInit(){ 
+  ngOnInit(){
+    this.item = [
+      {label: 'Application',
+          command: (event: any) => {
+          this.activeIndex = 0;
+        }
+      },
+      
+      {label: 'Assesment',
+        command: (event: any) => {
+        this.activeIndex = 1;
+      }
+      },
+      {label: 'Interview'},
+      {label: 'Offers'},
+      {label: 'Onboarding'},
+      {label: 'Hired'},
+  ]; 
   }
 
   showDialog() {
