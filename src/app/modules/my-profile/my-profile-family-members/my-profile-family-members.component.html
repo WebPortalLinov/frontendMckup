@@ -1,4 +1,7 @@
 <p-card header="{{ 'Family Members' }}" styleClass="ui-card--workforce mb-3" class="border-title">
+    <p-header>
+        <p-button type="button" class="m-2 pull-right" label="Add" icon="pi pi-plus"></p-button>
+    </p-header>
     <div class="ui-g">
         <div class="ui-g-12 p-0">
             <p-table [columns]="familyColumns" [value]="familyMembers" [scrollable]="true"
@@ -16,7 +19,7 @@
                     </tr>
                 </ng-template>
                 <ng-template pTemplate="body" let-rowData let-fam>
-                    <tr [pSelectableRow]="rowData">
+                    <tr [pSelectableRow]="fam">
                         <td>{{ fam.name }}</td>
                         <td>
                             {{ fam.relationship }}
@@ -32,7 +35,7 @@
                             {{ fam.education }}
                         </td>
                         <td>{{ fam.occupation }}</td>
-                        <td>{{ fam.note }}</td>
+                        <!-- <td>{{ fam.note }}</td> -->
                     </tr>
                 </ng-template>
                 <ng-template pTemplate="emptymessage" let-columns>
@@ -99,4 +102,10 @@
             <input pInputText id="color" [(ngModel)]="family.note" />
         </div>
     </div>
+    <p-footer>
+        <div class="ui-dialog-buttonpane ui-helper-clearfix">
+            <button type="button" pButton icon="pi pi-times" (click)="delete()" label="Delete"></button>
+            <button type="button" pButton icon="pi pi-check" (click)="save()" label="Save"></button>
+        </div>
+    </p-footer>
 </p-dialog>

@@ -8,6 +8,7 @@ import { JobAlertModule } from '../job-alert/job-alert.module';
 import { SavedJobsModule } from '../saved-jobs/saved-jobs.module';
 import { SharedModule } from 'app/shared/shared.module';
 import { AccountSettingModule } from '../account-setting/account-setting.module';
+import { HelpPageModule } from '../help-page/help-page.module';
 
 
 
@@ -22,6 +23,7 @@ import { AccountSettingModule } from '../account-setting/account-setting.module'
     JobAlertModule,
     SavedJobsModule,
     AccountSettingModule,
+    HelpPageModule
   ]
 })
 export class JobPortalModule { }

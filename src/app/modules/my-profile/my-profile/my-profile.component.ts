@@ -18,6 +18,7 @@ export class MyProfileComponent implements OnInit {
   completion: any
   completed : completed[]
   percentage: number
+  isDone: string
 
   options: any;
 
@@ -43,6 +44,8 @@ export class MyProfileComponent implements OnInit {
         this.percentage += 1;
       }
     }
+
+    this.isDone = ((this.percentage/12)*100).toFixed();
    
     this.completion = {
       labels:['Completed', 'Uncomplete'],
