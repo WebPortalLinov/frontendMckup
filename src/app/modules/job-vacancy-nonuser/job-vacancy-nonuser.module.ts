@@ -8,21 +8,13 @@ import { PaginatorModule } from 'primeng/paginator';
 import { DialogModule, CardModule, PanelModule, CarouselModule } from 'primeng/primeng';
 import { DropdownModule } from 'primeng/dropdown';
 import { ChipsModule } from 'primeng/chips';
+import { SharedModule } from 'app/shared/shared.module';
 
 @NgModule({
   declarations: [JobVacancyNonuserComponent],
   imports: [
     CommonModule,
-    MultiSelectModule,
-    TableModule,
-    ButtonModule,
-    PaginatorModule,
-    DialogModule,
-    CardModule,
-    PanelModule,
-    CarouselModule,
-    DropdownModule,
-    ChipsModule
+    SharedModule
   ]
 })
 export class JobVacancyNonuserModule { }

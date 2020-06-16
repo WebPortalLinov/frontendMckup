@@ -9,7 +9,7 @@ import {SelectItem} from 'primeng/api';
 @Component({
   selector: 'app-job-vacancy-nonuser',
   templateUrl: './job-vacancy-nonuser.component.html',
-  styleUrls: ['./job-vacancy-nonuser.component.scss']
+  styleUrls: ['./job-vacancy-nonuser.component.sass']
 })
 export class JobVacancyNonuserComponent implements OnInit {
 
@@ -21,6 +21,19 @@ export class JobVacancyNonuserComponent implements OnInit {
   myAppData: any[];
   cols: any[];
   display: boolean = false;
+  // jobVacancy:jobModel[] = [
+  //   {jobName:'Java Programmer', 
+  //   jobCompany:'Lawencon', 
+  //   jobLocation:'Jakarta, Indonesia', 
+  //   jobSalary:'IDR 5.000.000',
+  //   jobInfo:'Posted 1 month ago',
+  //   jobBenefit:'',
+  //   jobDescription:'',
+  //   jobQualification:'',
+  //   jobRequiredSkill:'',
+  //   jobSummary:'',
+  // },
+  // ];
 
   // dropdown location
   citys: SelectItem[];
@@ -70,8 +83,9 @@ export class JobVacancyNonuserComponent implements OnInit {
   // drpodown Get Notified
   getNotified: SelectItem[];
   selectedNotified: string[] = [];
-  notifiedItems: SelectItem[];
-  constructor() {
+  notifiedItems: SelectItem[]; 
+
+  ngOnInit() {
     this.myAppDetailsColumn = onConstructTableHeader([
       'Logo',
       'Job',
@@ -119,15 +133,15 @@ export class JobVacancyNonuserComponent implements OnInit {
     }
 
     this.citys = [
-      {label: 'Jakarta', value: 'Jakarta'},
-      {label: 'Tanggerang', value: 'Tanggerang'},
-      {label: 'Banten', value: 'Banten'},
-      {label: 'Bandung', value: 'Bandung'},
-      {label: 'Yogyakarta', value: 'Yogyakarta'},
-      {label: 'Surabaya', value: 'Surabaya'},
-      {label: 'Medan', value: 'Medan'},
-      {label: 'Work Abroad', value: 'Work Abroad'},
-      {label: 'Work From Home', value: 'Work From Home'},
+      {label: 'Jakarta', value: 'Location| Jakarta |'},
+      {label: 'Tanggerang', value: 'Location| Tanggerang |'},
+      {label: 'Banten', value: 'Location| Banten |'},
+      {label: 'Bandung', value: 'Location| Bandung |'},
+      {label: 'Yogyakarta', value: 'Location| Yogyakarta |'},
+      {label: 'Surabaya', value: 'Location| Surabaya |'},
+      {label: 'Medan', value: 'Location| Medan |'},
+      {label: 'Work Abroad', value: 'Location| Work Abroad |'},
+      {label: 'Work From Home', value: 'Location| Work From Home |'},
     ];
 
     this.cityItems = [];
@@ -149,8 +163,8 @@ export class JobVacancyNonuserComponent implements OnInit {
     }
 
     this.jobType = [
-      {label: 'Full Time', value: 'Full Time'},
-      {label: 'Part Time', value: 'Part Time'},
+      {label: 'Full Time', value: 'Job Type| Full Time |'},
+      {label: 'Part Time', value: 'Job Type| Part Time |'},
     ];
 
     this.jobTypesItems = [];
@@ -159,9 +173,9 @@ export class JobVacancyNonuserComponent implements OnInit {
     }
 
     this.employment = [
-      {label: 'Permanent', value: 'Permanent'},
-      {label: 'Contract', value: 'Contract'},
-      {label: 'Probation', value: 'Probation'},
+      {label: 'Permanent', value: 'Employment| Permanent |'},
+      {label: 'Contract', value: 'Employment| Contract |'},
+      {label: 'Probation', value: 'Employment| Probation |'},
     ];
 
     this.employmentItems = [];
@@ -170,29 +184,29 @@ export class JobVacancyNonuserComponent implements OnInit {
     }
 
     this.jobFunction = [
-      {label: 'Accounting and Finance', value: 'Accounting and Finance'},
-      {label: 'Administration and Coordination', value: 'Administration and Coordination'},
-      {label: 'Architecture and Engineering', value: 'Architecture and Engineering'},
-      {label: 'Arts and Sports', value: 'Arts and Sports'},
-      {label: 'Customer Service', value: 'Customer Service'},
-      {label: 'Education and Training', value: 'Education and Training'},
-      {label: 'General Service', value: 'General Service'},
-      {label: 'Health and Medical', value: 'Health and Medical'},
-      {label: 'Hospitality and Tourism', value: 'Hospitality and Tourism'},
-      {label: 'Human Resources', value: 'Human Resources'},
-      {label: 'IT and Software', value: 'IT and Software'},
-      {label: 'Legal', value: 'Legal'},
-      {label: 'Management and Consultancy', value: 'Management and Consultancy'},
-      {label: 'Manufacturing and Production', value: 'Manufacturing and Production'},
-      {label: 'Media and Creatives', value: 'Media and Creatives'},
-      {label: 'Mining & Energy', value: 'Mining & Energy'},
-      {label: 'Oil & Gas', value: 'Oil & Gas'},
-      {label: 'Public Service and NGOs', value: 'Public Service and NGOs'},
-      {label: 'Safety and Security', value: 'Safety and Security'},
-      {label: 'Sales and Marketing', value: 'Sales and Marketing'},
-      {label: 'Sciences', value: 'Sciences'},
-      {label: 'Supply Chain', value: 'Supply Chain'},
-      {label: 'Writing and Content', value: 'Writing and Content'},
+      {label: 'Accounting and Finance', value: 'Job Function| Accounting and Finance |'},
+      {label: 'Administration and Coordination', value: 'Job Function| Administration and Coordination |'},
+      {label: 'Architecture and Engineering', value: 'Job Function| Architecture and Engineering |'},
+      {label: 'Arts and Sports', value: 'Job Function| Arts and Sports |'},
+      {label: 'Customer Service', value: 'Job Function| Customer Service |'},
+      {label: 'Education and Training', value: 'Job Function| Education and Training |'},
+      {label: 'General Service', value: 'Job Function| General Service |'},
+      {label: 'Health and Medical', value: 'Job Function| Health and Medical |'},
+      {label: 'Hospitality and Tourism', value: 'Job Function| Hospitality and Tourism |'},
+      {label: 'Human Resources', value: 'Job Function| Human Resources |'},
+      {label: 'IT and Software', value: 'Job Function| IT and Software |'},
+      {label: 'Legal', value: 'Job Function| Legal |'},
+      {label: 'Management and Consultancy', value: 'Job Function| Management and Consultancy |'},
+      {label: 'Manufacturing and Production', value: 'Job Function| Manufacturing and Production |'},
+      {label: 'Media and Creatives', value: 'Job Function| Media and Creatives |'},
+      {label: 'Mining & Energy', value: 'Job Function| Mining & Energy |'},
+      {label: 'Oil & Gas', value: 'Job Function| Oil & Gas |'},
+      {label: 'Public Service and NGOs', value: 'Job Function| Public Service and NGOs |'},
+      {label: 'Safety and Security', value: 'Job Function| Safety and Security |'},
+      {label: 'Sales and Marketing', value: 'Job Function| Sales and Marketing |'},
+      {label: 'Sciences', value: 'Job Function| Sciences |'},
+      {label: 'Supply Chain', value: 'Job Function| Supply Chain |'},
+      {label: 'Writing and Content', value: 'Job Function| Writing and Content |'},
     ];
 
     this.jobFunctionItems = [];
@@ -201,14 +215,14 @@ export class JobVacancyNonuserComponent implements OnInit {
     }
 
     this.education = [
-      {label: 'Diploma 4', value: 'Diploma 4'},
-      {label: 'Bachelor', value: 'Bachelor'},
-      {label: 'Master', value: 'Master'},
-      {label: 'Doctor', value: 'Doctor'},
-      {label: 'Elementary School', value: 'Elementary School'},
-      {label: 'Junior High School', value: 'Junior High School'},
-      {label: 'Senior High School', value: 'Senior High School'},
-      {label: 'Vocational High School', value: 'Vocational High School'},
+      {label: 'Diploma 4', value: 'Education| Diploma 4 |'},
+      {label: 'Bachelor', value: 'Education| Bachelor |'},
+      {label: 'Master', value: 'Education| Master |'},
+      {label: 'Doctor', value: 'Education| Doctor |'},
+      {label: 'Elementary School', value: 'Education| Elementary School |'},
+      {label: 'Junior High School', value: 'Education| Junior High School |'},
+      {label: 'Senior High School', value: 'Education| Senior High School |'},
+      {label: 'Vocational High School', value: 'Education| Vocational High School |'},
     ];
 
     this.educationItems = [];
@@ -217,12 +231,12 @@ export class JobVacancyNonuserComponent implements OnInit {
     }
 
     this.company = [
-      {label: 'Lawencon', value: 'Lawencon'},
-      {label: 'Linov Rocket Prestasi', value: 'Linov Rocket Prestasi'},
-      {label: 'Tokopedia', value: 'Tokopedia'},
-      {label: 'Shopee', value: 'Shopee'},
-      {label: 'Grab', value: 'Grab'},
-      {label: 'Gojek', value: 'Gojek'},
+      {label: 'Lawencon', value: 'Company| Lawencon |'},
+      {label: 'Linov Rocket Prestasi', value: 'Company| Linov Rocket Prestasi |'},
+      {label: 'Tokopedia', value: 'Company| Tokopedia |'},
+      {label: 'Shopee', value: 'Company| Shopee |'},
+      {label: 'Grab', value: 'Company| Grab |'},
+      {label: 'Gojek', value: 'Company| Gojek |'},
     ];
 
     this.companyItems = [];
@@ -231,21 +245,62 @@ export class JobVacancyNonuserComponent implements OnInit {
     }
 
     this.salary = [
-      {label: 'IDR 5.000.000', value: 'IDR 5.000.000'},
-      {label: 'IDR 10.000.000', value: 'IDR 10.000.000'},
-      {label: 'IDR 15.000.000', value: 'IDR 15.000.000'},
+      {label: 'IDR', value: 'IDR'},
+      {label: 'USD', value: 'USD'},
     ];
 
     this.salaryItems = [];
     for (let i = 0; i < 10000; i++) {
         this.salaryItems.push({label: 'Item ' + i, value: 'Item ' + i});
     }
-   }
-
-  ngOnInit() {
   }
+  selChip:any[] = []
 
-  showDialog() {
-    this.display = true;
+  changeCity(event){
+    this.selChip =[]
+    console.log('employment', this.selectedEmployement);
+    
+    this.selChip = this.selChip.concat(this.selectedCity,
+      this.selectedCompany,
+      this.selectedEducation,
+      this.selectedEmployement,
+      this.selectedJobFunction,
+      this.selectedJobLevel,
+      this.selectedJobType,
+      this.selectedSalary)
   }
-}
+  selChipRemove(event){
+    console.log("event", event);
+    console.log("idx",this.selectedCity.indexOf(event.value));
+    
+    this.selectedCity.splice(this.selectedCity.indexOf(event.value),1)
+    this.selectedCompany.splice(this.selectedCompany.indexOf(event.value),1)
+    this.selectedEducation.splice(this.selectedEducation.indexOf(event.value),1)
+    this.selectedEmployement.splice(this.selectedEmployement.indexOf(event.value),1)
+    this.selectedJobFunction.splice(this.selectedJobFunction.indexOf(event.value),1)
+    this.selectedJobLevel.splice(this.selectedJobLevel.indexOf(event.value),1)
+    this.selectedJobType.splice(this.selectedJobType.indexOf(event.value),1)
+    this.selectedSalary.splice(this.selectedSalary.indexOf(event.value),1)
+    
+  }
+  removeChip(){
+    this.selectedCity.splice(0, this.selChip.length)
+    this.selectedCompany.splice(0, this.selChip.length)
+    this.selectedEducation.splice(0, this.selChip.length)
+    this.selectedEmployement.splice(0, this.selChip.length)
+    this.selectedJobFunction.splice(0, this.selChip.length)
+    this.selectedJobLevel.splice(0, this.selChip.length)
+    this.selectedJobType.splice(0, this.selChip.length)
+    this.selectedSalary.splice(0, this.selChip.length)
+    this.selChip.splice(0, this.selChip.length);
+  
+  }
+  salaShow:boolean = false
+  salaryClick(){
+  this.salaShow = !this.salaShow
+  }
+  
+    showDialog() {
+      this.display = true;
+    }
+  }  
