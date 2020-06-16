@@ -11,15 +11,17 @@
                 <tbody>
                   <tr>
                     <td colspan="6"><a href="./job-alert" class="detail-alert"><u>Programmer (5 new)</u></a><br><span>Jakarta, Indonesia</span><br><span class="fe fe-clock">&nbsp;Weekly via email and notification</span></td>
-                    <td colspan="2">
-                      <button type="button" pButton icon="pi pi-pencil" style="border-color: black;" (click)="showDialog()" label="EDIT" class="ui-button-secondary"></button>  
+                    <td colspan="2" style="text-align: right;">
+                      
+                      <!-- <button pButton icon="pi pi-pencil" style="border-color: black; width:60px; height: 20px;" (click)="showDialog()" label="EDIT" class="ui-button-secondary"></button>   -->
                     </td>
-                    <td colspan="2">
-                      <button type="button" pButton icon="pi pi-trash" style="border-color: black;" (click)="confirm2()" label="DELETE" class="ui-button-secondary"></button>  
+                    <td colspan="2" style="text-align: right;">
+                      <button class="btn"><i class="fa fa-trash-o"></i>DELETE</button>
+                      <!-- <button type="button" pButton icon="pi pi-trash" style="border-color: black;" (click)="confirm2()" label="DELETE" class="ui-button-secondary"></button>   -->
                     </td>
                   </tr>
                 <tr>
-                  <td colspan="6"><h6>Programmer (5 new)</h6><br><span>Jakarta, Indonesia</span><br><span class="fe fe-clock">&nbsp;Weekly via email and notification</span></td>
+                  <td colspan="6"><a href="./job-alert" class="detail-alert"><u>Developer (97 new)</u></a><br><span>Jakarta, Indonesia</span><br><span class="fe fe-clock">&nbsp;Weekly via email and notification</span></td>
                   <td colspan="2">
                     <button type="button" pButton icon="pi pi-pencil" style="border-color: black;" (click)="showDialog()" label="EDIT" class="ui-button-secondary"></button>  
                   </td>
@@ -28,7 +30,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <td colspan="6"><h6>Programmer (5 new)</h6><br><span>Jakarta, Indonesia</span><br><span class="fe fe-clock">&nbsp;Weekly via email and notification</span></td>
+                  <td colspan="6"><a href="./job-alert" class="detail-alert"><u>Manager (23 new)</u></a><br><span>Jakarta, Indonesia</span><br><span class="fe fe-clock">&nbsp;Weekly via email</span></td>
                   <td colspan="2">
                     <button type="button" pButton icon="pi pi-pencil" style="border-color: black;" (click)="showDialog()" label="EDIT" class="ui-button-secondary"></button>  
                   </td>
@@ -37,25 +39,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <td colspan="6"><h6>Programmer (5 new)</h6><br><span>Jakarta, Indonesia</span><br><span class="fe fe-clock">&nbsp;Weekly via email and notification</span></td>
-                  <td colspan="2">
-                    <button type="button" pButton icon="pi pi-pencil" style="border-color: black;" (click)="showDialog()" label="EDIT" class="ui-button-secondary"></button>  
-                  </td>
-                  <td colspan="2">
-                    <button type="button" pButton icon="pi pi-trash" style="border-color: black;" (click)="confirm2()" label="DELETE" class="ui-button-secondary"></button>  
-                  </td>
-                </tr>
-                <tr>
-                  <td colspan="6"><h6>Programmer (5 new)</h6><br><span>Jakarta, Indonesia</span><br><span class="fe fe-clock">&nbsp;Weekly via email and notification</span></td>
-                  <td colspan="2">
-                    <button type="button" pButton icon="pi pi-pencil" style="border-color: black;" (click)="showDialog()" label="EDIT" class="ui-button-secondary"></button>  
-                  </td>
-                  <td colspan="2">
-                    <button type="button" pButton icon="pi pi-trash" style="border-color: black;" (click)="confirm2()" label="DELETE" class="ui-button-secondary"></button>  
-                  </td>
-                </tr>
-                <tr>
-                  <td colspan="6"><h6>Programmer (5 new)</h6><br><span>Jakarta, Indonesia</span><br><span class="fe fe-clock">&nbsp;Weekly via email and notification</span></td>
+                  <td colspan="6"><a href="./job-alert" class="detail-alert"><u>Analyst (15 new)</u></a><br><span>Jakarta, Indonesia</span><br><span class="fe fe-clock">&nbsp;Weekly via notification</span></td>
                   <td colspan="2">
                     <button type="button" pButton icon="pi pi-pencil" style="border-color: black;" (click)="showDialog()" label="EDIT" class="ui-button-secondary"></button>  
                   </td>
@@ -97,9 +81,12 @@
   </div>
   <div class="p-col-12">
     <p><br>Get notified via<br></p>
-    <p-radioButton name="groupname2" label="Email and Notification" [(ngModel)]="selectedValueNotif"></p-radioButton><br>
+    <input type="radio" ng-disabled="all" label="Email"><br>
+    <input type="radio" ng-disabled="all" label="Email and Notification"><br>
+    <input type="radio" ng-disabled="all" label="Notification">
+    <!-- <p-radioButton name="groupname2" label="Email and Notification" [(ngModel)]="selectedValueNotif"></p-radioButton><br>
     <p-radioButton name="groupname2" label="Email" [(ngModel)]="selectedValueNotif"></p-radioButton><br>
-    <p-radioButton name="groupname2" label="Notification" [(ngModel)]="selectedValueNotif"></p-radioButton>
+    <p-radioButton name="groupname2" label="Notification" [(ngModel)]="selectedValueNotif"></p-radioButton> -->
   </div>
   <p-footer>
     <button type="button" pButton icon="pi pi-undo" (click)="display=false" label="CANCEL" class="ui-button-secondary"></button>  

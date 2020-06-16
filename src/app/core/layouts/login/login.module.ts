@@ -11,8 +11,8 @@ import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { CheckboxModule } from 'primeng/primeng';
 import { HeaderService } from '../home/components/header/shared/header.service';
-import { MyappDetailComponent } from './my-applications/myapp-detail/myapp-detail.component';
-import { MyappListComponent } from './my-applications/myapp-list/myapp-list.component';
+// import { MyappDetailComponent } from './my-applications/myapp-detail/myapp-detail.component';
+// import { MyappListComponent } from './my-applications/myapp-list/myapp-list.component';
 import { JobVacancyNonuserModule } from '../../../modules/job-vacancy-nonuser/job-vacancy-nonuser.module';
 @NgModule({
     imports: [SharedModule, LaddaModule, CheckboxModule, JobVacancyNonuserModule],
@@ -23,8 +23,6 @@ import { JobVacancyNonuserModule } from '../../../modules/job-vacancy-nonuser/jo
         ResetPasswordComponent,
         HomeComponent,
         RegisterComponent,
-        MyappDetailComponent,
-        MyappListComponent,
     ],
     providers: [],
 })
