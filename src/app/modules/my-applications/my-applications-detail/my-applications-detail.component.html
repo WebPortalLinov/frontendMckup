@@ -50,30 +50,39 @@
     <p-card>
         <div class="card">
             <div class="row">
-                <div class="col-2">
+                <div class="col-2" style="align-self: center;">
                     <img class="fit-picture"
                         src="./assets/images/gallery/lawenlogo.jpg"
                         alt="Company Logo">
                 </div>
-                <div class="col-2">
-                    <h6 href="./detail" class="detail-job">Java Programmer</h6>
-                    <br><span><small>PT Lawencon International</small></span>
+                <div class="col-4" >
+                    <h6 href="./detail">Java Programmer<br></h6>
+                    <span><small><b>PT Lawencon International</b></small></span>
                     <br><span><small>Jakarta, Indonesia</small></span>
                     <br><span><small>Salary IDR 5,000,000-10,000,000</small></span>
                 </div>
-                <div class="col-8" style="float: right;">
-                    <div class="row">
-                        <small>Posted 5 month ago <br></small>
+                <div class="col-6" style="float: right;">
+                    <!-- <span class="pull-right"> -->
+                        <small>Posted 5 month ago<br></small>
                         <small>applied 3 month ago </small>
-                    </div>
                     <div class="row">
                         <small><b>viewed 3 times</b></small>
                     </div>
                     <div class="row">
-                        <button type="button" pButton icon="pi pi-share-alt" style="border-color: black;"label="SHARE" class="ui-button-secondary"(click)="showDialog()"></button>
-                        <button type="button" pButton icon="pi pi-heart" style="border-color: black;"label="SAVE" class="ui-button-secondary"(click)="showDialog()"></button>
-                        <button type="button" pButton icon="pi pi-trash" style="border-color: black;"label="WITHDRAW" class="ui-button-secondary"(click)="showDialog()"></button>
+                        <button class="btn"><i class="fas fa-share-alt"></i>
+                            SHARE
+                        </button>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button  class="btn"><i class="far fa-heart"></i>
+                            SAVE
+                        </button>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button class="btn"><i class="fas fa-trash-alt"></i>
+                            WITHDRAW
+                        </button>
+                        <!-- <button type="button" pButton icon="pi pi-share-alt" style="border-color: black;"label="SHARE" class="btn"(click)="showDialog()"></button>
+                        <button type="button" pButton icon="pi pi-heart" style="border-color: black;"label="SAVE" class="btn"(click)="showDialog()"></button>
+                        <button type="button" pButton icon="pi pi-trash" style="border-color: black;"label="WITHDRAW" class="btn"(click)="showDialog()"></button> -->
                     </div>                   
+                    <!-- </span> -->
                 </div>
             </div>
                   
@@ -87,6 +96,7 @@
         <div class="ui-g-12 p-0">
     
         <p-panel header="Job Description">
+            <small>
             A Java developer is responsible for many duties throughout the development lifecycle of applications, from concept and design right through to testing. Here are some other responsibilities they may have:
             <ul>
                 <li>Design, implement and maintain java application phases</li>
@@ -99,12 +109,13 @@
                 <li>technical designs for application development</li>
                 <li>Develop application code for java programs</li>
             </ul>
+        </small>
         </p-panel>
         <p-panel header="Qualification">
-          <p>
+          <small>
             A professional certification is recommended when looking for jobs in in Java Development. Most employers will require applicants to have a degree in computer science, information systems, mathematics or any other closely related field. Computer science degrees tend to be more preferable as these courses tend to offer tasks related to Java programming with coursework including data structures, computer architecture, database management, statistics and technical writing.
             However, applicants without any kind of degree or education can still be considered if they can show significant knowledge and experience of programming in Java.
-          </p>
+          </small>
         </p-panel>
     </div>
     </div>
@@ -115,29 +126,39 @@
     <p-card>
         <div class="ui-g">
             <div class="ui-g-12 p-0">
-                <p-panel header="BENEFIT">
-                    <div class="chip">
-                    <!-- <img src="img_avatar.jpg" alt="Person" width="96" height="96"> -->
-                        Medical insurance
+                <p-panel header="BENEFITS">
+                    <div class="col-12">
+                        <div class="chip">
+                                Medical insurance
+                            </div>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <div class="chip">
+                                Dental insurance
+                            </div>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <div class="chip">
+                                Transportation allowance
+                            </div>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <div class="chip">
+                                Free gym membership 
+                            </div>
                     </div>
-                    <div class="chip">
-                        Dental insurance
-                    </div>
-                    <div class="chip">
-                        Transportation allowance
-                    </div>
-                    <div class="chip">
-                        Free gym membership 
-                    </div>
+                    <br>
+                   <div class="col-12">
                     <div class="chip">
                         Free launch
                     </div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <div class="chip">
                         Housing allowance
                     </div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <div class="chip">
                         Free shuttle bus
                     </div>
+                   </div>
+                    
                 </p-panel>
             </div>
         </div>
@@ -151,6 +172,31 @@
         <div class="ui-g">
             <div class="ui-g-12 p-0">
                 <p-panel header="REQUIRED SKILLS">
+                    <div class="col-12">
+                        <div class="chip">
+                                Java programming | Advanced
+                            </div>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <div class="chip">
+                                HTM | Intermediate
+                            </div>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <div class="chip">
+                                PHP | Advanced
+                            </div>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <div class="chip">
+                                Oracle Database | Beginner
+                            </div>
+                           
+                    </div>
+                    <br>
+                   <div class="col-12">
+                    <div class="chip">
+                        Java Android | Advanced
+                    </div>
+                   </div>
+                    
                 </p-panel>
             </div>
         </div>
@@ -162,6 +208,51 @@
         <div class="ui-g">
             <div class="ui-g-12 p-0">
                 <p-panel header="JOB SUMMARY">
+                  <div class="row">
+                    <div class="col-2">
+                       <small>
+                           <b>Job Level</b><br>Associate/Supervisor
+                       </small>
+                    </div>
+                    <div class="col-2">
+                        <small>
+                            <b>Job Category</b><br>IT and Software
+                        </small>
+                    </div>
+                   <div class="col-2">
+                    <small>
+                        <b>Industry</b><br>Information Technology/IT
+                    </small>
+                    </div>
+                    <div class="col-2">
+                        <small>
+                            <b>Education Requirement</b><br>Bachelor
+                        </small>
+                    </div>
+                    <div class="col-2">
+                        <small>
+                            <b>Vacancy</b><br>3 opening
+                        </small>
+
+                    </div>
+                    <div class="col-2">
+                        <small>
+                            <b>Employment type</b><br>Permanent
+                        </small>
+                    </div> 
+                </div>
+                  <br> 
+                  <div class="row">
+                      <div class="col-4">
+                          <small>
+                              <b>Office Address</b><br>Wisma Staco, 5th floor Casablanca Street Kav 18, 12870, Jakarta Selatan
+                          </small>
+                      </div>
+                      <div class="col-4">
+                        <i class="fas fa-map-marker-alt"></i>
+                          <a style="font-size: small;"><u>&nbsp;View Location on Google Map</u> </a>
+                      </div>
+                  </div>
                 </p-panel>
             </div>
         </div>

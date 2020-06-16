@@ -13,10 +13,14 @@ export class JobAlertListComponent implements OnInit {
   selectedValueNotif: string;
   msgs: Message[] = [];
   display: boolean = false;
+  display2: boolean = false;
 
   showDialog() {
       this.display = true;
   }
+  showDialog2() {
+    this.display2 = true;
+}
 
   position: string;
   constructor(private confirmationService :ConfirmationService) { }
@@ -37,19 +41,19 @@ export class JobAlertListComponent implements OnInit {
     });
 }
 
-confirm2() {
-    this.confirmationService.confirm({
-        message: 'You are about to delete the job alert for Programmer, Jakarta, Indonesia. This cannot be undone',
-        header: 'Delete Job Alert',
-        icon: 'pi pi-info-circle',
-        accept: () => {
-            this.msgs = [{severity:'info', summary:'Confirmed', detail:'Record deleted'}];
-        },
-        reject: () => {
-            this.msgs = [{severity:'info', summary:'Rejected', detail:'You have rejected'}];
-        }
-    });
-}
+// confirm2() {
+//     this.confirmationService.confirm({
+//         message: 'You are about to delete the job alert for Programmer, Jakarta, Indonesia. This cannot be undone',
+//         header: 'Delete Job Alert',
+//         icon: 'pi pi-info-circle',
+//         accept: () => {
+//             this.msgs = [{severity:'info', summary:'Confirmed', detail:'Record deleted'}];
+//         },
+//         reject: () => {
+//             this.msgs = [{severity:'info', summary:'Rejected', detail:'You have rejected'}];
+//         }
+//     });
+// }
 
 confirmPosition(position: string) {
     this.position = position;
