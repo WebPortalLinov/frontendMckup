@@ -59,6 +59,7 @@ import { MyApplicationsModule } from './modules/my-applications/my-applications.
 import { MyApplicationsListComponent } from './modules/my-applications/my-applications-list/my-applications-list.component';
 import { MyApplicationsDetailComponent } from './modules/my-applications/my-applications-detail/my-applications-detail.component';
 import { MyApplicationsComponent } from './modules/my-applications/my-applications/my-applications.component';
+import { JobVacancyNonuserComponent } from './modules/job-vacancy-nonuser/job-vacancy-nonuser.component';
 
 
 const routes: Routes = [
@@ -93,6 +94,10 @@ const routes: Routes = [
             {
                 path: 'reset-password',
                 component: ResetPasswordComponent,
+            },
+            {
+                path: 'job-vacancy-nonuser',
+                component: JobVacancyNonuserComponent,
             },
         ],
     },
