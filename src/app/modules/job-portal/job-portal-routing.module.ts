@@ -10,6 +10,7 @@ import { MyApplicationsComponent } from '../my-applications/my-applications/my-a
 import { JobAlertListComponent } from '../job-alert/job-alert-list/job-alert-list.component';
 import { SavedJobsComponent } from '../saved-jobs/saved-jobs/saved-jobs.component';
 import { AccountSettingsComponent } from '../account-setting/account-settings/account-settings.component';
+import { HelpPageComponent } from '../help-page/help-page.component';
 
 
 const routes: Routes = [
@@ -22,10 +23,14 @@ const routes: Routes = [
       component:JobVacancyListComponent,
     },
     {
-      path:':uuid',
+      path:':detail',
       component:JobVacancyDetailComponent,
     }
   ]
+  },
+  {
+    path:'job-detail',
+    component:JobVacancyDetailComponent,
   },
   {
     path:'my-applications',
@@ -60,6 +65,10 @@ const routes: Routes = [
   {
     path:'account-settings',
     component:AccountSettingsComponent,
+  },
+  {
+    path:'help',
+    component:HelpPageComponent
   }
 ];
 

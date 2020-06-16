@@ -15,11 +15,14 @@
                 </h1>
             </div>
         </div>
-        <div *ngIf="username.invalid && username.dirty" class="ui-grid-row">
+        <div *ngIf="name.invalid && name.dirty" class="ui-grid-row">
             <div class="ui-grid-col-12">
-                <p-message *ngIf="username.errors['required']" severity="error" text="Username is required"></p-message>
-                <p-message *ngIf="username.errors['pattern']" severity="error" text="Username must be an alphanumberic">
-                </p-message>
+                <p-message *ngIf="name.errors['required']" severity="error" text="Name is required"></p-message>
+            </div>
+        </div>
+        <div *ngIf="email.invalid && email.dirty" class="ui-grid-row">
+            <div class="ui-grid-col-12">
+                <p-message *ngIf="email.errors['required']" severity="error" text="Email is required"></p-message>
             </div>
         </div>
         <div *ngIf="password.invalid && password.dirty" class="ui-grid-row">
@@ -39,7 +42,7 @@
             <div class="ui-grid-col-12">
                 <span>
                     <label>Email</label>
-                    <input pInputText formControlName="username" type="text" autofocus />
+                    <input pInputText formControlName="email" type="text" autofocus />
                 </span>
             </div>
         </div>
@@ -86,7 +89,7 @@
                     Already have a LinovHR account? &nbsp;
                 </div>
                 <div class="ui-g-2">
-                    <a href="../sign-in/">Sign In</a>
+                    <a href="home/login/">Sign In</a>
                 </div>
             </div>
         </div>

@@ -19,8 +19,6 @@ export class MyProfileEducationComponent implements OnInit {
       'Grade',
       'Begin Year',
       'End Year',
-      'Country',
-      'City',
     ]);
   }
 

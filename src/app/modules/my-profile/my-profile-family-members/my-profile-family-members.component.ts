@@ -32,11 +32,11 @@ export class MyProfileFamilyMembersComponent implements OnInit {
       'Name',
       'Relationship',
       'Gender',
-      'Phone',
+      // 'Phone',
       'Date Of Birth',
       'Education',
       'Occupation',
-      'Note',
+      // 'Note',
     ]);
 
     this.familyMembers = [

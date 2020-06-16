@@ -16,18 +16,13 @@ import { MyProfileOrganizationExperienceComponent } from './my-profile-organizat
 import { MyProfileTrainingComponent } from './my-profile-training/my-profile-training.component';
 import { MyProfileDocumentsComponent } from './my-profile-documents/my-profile-documents.component';
 import { MyProfileReferenceComponent } from './my-profile-reference/my-profile-reference.component';
+import { SharedModule } from 'app/shared/shared.module';
 
 @NgModule({
   declarations: [MyProfileComponent, MyProfileBasicInformationComponent, MyProfileFamilyMembersComponent, MyProfileAddressInformationComponent, MyProfileEducationComponent, MyProfileSkillsComponent, MyProfileLanguagesComponent, MyProfileWorkingExperienceComponent, MyProfileProjectExperienceComponent, MyProfileOrganizationExperienceComponent, MyProfileTrainingComponent, MyProfileDocumentsComponent, MyProfileReferenceComponent],
   imports: [
     CommonModule,
-    TableModule,
-    ChartModule,
-    CardModule,
-    CheckboxModule,
-    FormsModule,
-    DropdownModule,
-    DialogModule
+    SharedModule
   ]
 })
 export class MyProfileModule { }
