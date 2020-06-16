@@ -67,7 +67,7 @@ const routes: Routes = [
 
     // Authetication Routes
 
-    // { path: '', redirectTo: 'login', pathMatch: 'full' },
+    { path: '', redirectTo: 'job-vacancy', pathMatch: 'full' },
     // { path: 'login', component: LoginComponent, data: { title: ':: Epic ::' } },
     {
         path: 'home',
