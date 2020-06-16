@@ -1,5 +1,5 @@
-<div class="container">
-  <div class="jumbotron">
+<div class="ui-g-12" style="background-color: gainsboro;border-radius: 2%;">
+  <div class="container">
     <div class="img-fluid"> 
       <div class="input-group mb-3">
         <input type="text" class="form-control" placeholder="Search for Job Vacancy Title, Company or Location " aria-label="Recipient's username" aria-describedby="basic-addon2">
@@ -9,40 +9,38 @@
       </div>
     </div>
 
-    <div class="detail-job">
-      <p-multiSelect [options]="citys" [showHeader]=true [(ngModel)]="selectedCity" [defaultLabel]="'Location'"></p-multiSelect>
-      &nbsp;
-      <p-multiSelect [options]="jobLevel" [(ngModel)]="selectedJobLevel" [defaultLabel]="'Job Level'"></p-multiSelect>
-      &nbsp;
-      <p-multiSelect [options]="jobType" [(ngModel)]="selectedJobType" [defaultLabel]="'Job Type'"></p-multiSelect>
-      &nbsp;
-      <p-multiSelect [options]="employment" [(ngModel)]="selectedEmployment" [defaultLabel]="'Employment Type'"></p-multiSelect>
-      &nbsp;
-      <p-multiSelect [options]="jobFunction" [(ngModel)]="selectedJobFunction" [defaultLabel]="'Job Function'"></p-multiSelect>
-      &nbsp;
-      <p-multiSelect [options]="education" [(ngModel)]="selectedEducation" [defaultLabel]="'Education'"></p-multiSelect>
-      &nbsp;
-      <p-multiSelect [options]="company" [(ngModel)]="selectedCompany" [defaultLabel]="'Company'"></p-multiSelect>
-      &nbsp;
-      <p-dropdown [options]="salary" [(ngModel)]="selectedSalary" placeholder="Salary"></p-dropdown>
-      <br>
-      <Label>Location</Label>
-      <p-chips [(ngModel)]="selectedCity"></p-chips>
-      <Label>Job Level</Label>
-      <p-chips [(ngModel)]="selectedJobLevel"></p-chips>
-      <Label>Job Type</Label>
-      <p-chips [(ngModel)]="selectedJobType"></p-chips>
-      <Label>Employment</Label>
-      <p-chips [(ngModel)]="selectedEmployment"></p-chips>
-      <Label>Job Function</Label>
-      <p-chips [(ngModel)]="selectedJobFunction"></p-chips>
-      <Label>Education</Label>
-      <p-chips [(ngModel)]="selectedEducation"></p-chips>
-      <Label>Company</Label>
-      <p-chips [(ngModel)]="selectedCompany"></p-chips>
-      <Label>Salary</Label>
-      {{selectedSalary}}
-      
+    <div class="detail-job ui-g-12 p-0">
+      <div class="ui-g-12 p-0">
+        <p-multiSelect [options]="citys" (onChange)="changeCity(event)" [displaySelectedLabel]=false [(ngModel)]="selectedCity" [defaultLabel]="'Location'"></p-multiSelect>
+        &nbsp;
+        <p-multiSelect [options]="jobLevel" (onChange)="changeCity(event)" [displaySelectedLabel]=false [(ngModel)]="selectedJobLevel" [defaultLabel]="'Job Level'"></p-multiSelect>
+        &nbsp;
+        <p-multiSelect [options]="jobType" (onChange)="changeCity(event)" [displaySelectedLabel]=false [(ngModel)]="selectedJobType" [defaultLabel]="'Job Type'"></p-multiSelect>
+        &nbsp;
+        <p-multiSelect [options]="employment" (onChange)="changeCity(event)" [displaySelectedLabel]=false [(ngModel)]="selectedEmployment" [defaultLabel]="'Employment Type'"></p-multiSelect>
+        &nbsp;
+        <p-multiSelect [options]="jobFunction" (onChange)="changeCity(event)" [displaySelectedLabel]=false [(ngModel)]="selectedJobFunction" [defaultLabel]="'Job Function'"></p-multiSelect>
+        &nbsp;
+        <p-multiSelect [options]="education" (onChange)="changeCity(event)" [displaySelectedLabel]=false [(ngModel)]="selectedEducation" [defaultLabel]="'Education'"></p-multiSelect>
+        &nbsp;
+        <p-multiSelect [options]="company" (onChange)="changeCity(event)" [displaySelectedLabel]=false [(ngModel)]="selectedCompany" [defaultLabel]="'Company'"></p-multiSelect>
+        &nbsp;
+        <p-splitButton class="split-color split-font split-height split-height2 drop-height align-left font-color icon-color" 
+        [style]="{width: '103px'}" styleClass="ui-button-info" label="Salary" 
+        (onDropdownClick)="salaryClick()" [model]="items"></p-splitButton>
+      </div>
+      <div class="ui-g-9"></div>
+      <div class="ui-g-3" *ngIf="salaShow">
+        <p-card header="Simple Card" [style]="{width: '360px'}">
+          <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
+              quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</div>
+        </p-card>
+      </div>
+      <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid">
+      <div class="ui-g-12">
+        <p-chips [(ngModel)]="selChip" (onRemove)="selChipRemove($event)"></p-chips>
+      </div>
+      </div>
     </div>
     <div class="pull-right">
       <button pButton 
@@ -52,14 +50,17 @@
   </div>
 </div>
 
-<div class="container">
+<div class="ui-g-12">
+  <div class="container">
   <div class="row">
     <div>
       <a style="margin-left: 20px;"><strong>RECOMMENDED JOBS</strong></a>
     </div>
   </div>
 </div>
+</div>
 
+<div class="ui-g-12">
   <div class="row" style="margin-left: 6px;">
     <div class="section-body mt-3">
       <div class="container-fluid">
@@ -87,8 +88,8 @@
                           src="./assets/images/gallery/logo.jpg"
                           alt="Company Logo">
                       </td>
-                      <td colspan="7">
-                          <a href="./detail" class="detail-job"><u>Java Programmer</u></a>
+                      <td colspan="7" >
+                          <a href="./job-detail" class="detail-job"><u>Java Programmer</u></a>
                           <br><span><small>Lawencon International</small></span>
                           <br><span><small>Jakarta, Indonesia</small></span>
                           <br><span><small> IDR 5,000,000-10,000,000</small></span>
@@ -308,3 +309,4 @@
       </div>
     </div>
   </div>
+</div>

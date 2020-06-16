@@ -5,11 +5,12 @@ import { FormGroup } from '@angular/forms';
 import { SelectItemGroup } from 'primeng/components/common/selectitemgroup';
 import { onConstructTableHeader } from 'app/shared/utils/construct-table-header';
 import {SelectItem} from 'primeng/api';
+import { jobModel } from '../jobVacancyModel';
 
 @Component({
   selector: 'app-job-vacancy',
   templateUrl: './job-vacancy.component.html',
-  styleUrls: ['./job-vacancy.component.scss']
+  styleUrls: ['./job-vacancy.component.sass']
 })
 
 
@@ -22,6 +23,19 @@ export class JobVacancyComponent implements OnInit {
   myAppData: any[];
   cols: any[];
   display: boolean = false;
+  jobVacancy:jobModel[] = [
+    {jobName:'Java Programmer', 
+    jobCompany:'Lawencon', 
+    jobLocation:'Jakarta, Indonesia', 
+    jobSalary:'IDR 5.000.000',
+    jobInfo:'Posted 1 month ago',
+    jobBenefit:'',
+    jobDescription:'',
+    jobQualification:'',
+    jobRequiredSkill:'',
+    jobSummary:'',
+  },
+  ];
 
   // dropdown location
   citys: SelectItem[];
@@ -246,7 +260,34 @@ export class JobVacancyComponent implements OnInit {
 
   ngOnInit() {
 }
+selChip:any[] = []
+changeCity(event){
+  this.selChip =[]
+  this.selChip = this.selChip.concat(this.selectedCity,
+    this.selectedCompany,this.selectedEducation,this.selectedEmployement,
+    this.selectedJobFunction,this.selectedJobLevel,
+    this.selectedJobType,this.selectedSalary)
+}
+selChipRemove(event){
+  console.log("event", event);
+  console.log("idx",this.selectedCity.indexOf(event.value));
+  
+  this.selectedCity.splice(this.selectedCity.indexOf(event.value),1)
+  this.selectedCompany.splice(this.selectedCompany.indexOf(event.value),1)
+  this.selectedEducation.splice(this.selectedEducation.indexOf(event.value),1)
+  this.selectedEmployement.splice(this.selectedEmployement.indexOf(event.value),1)
+  this.selectedJobFunction.splice(this.selectedJobFunction.indexOf(event.value),1)
+  this.selectedJobLevel.splice(this.selectedJobLevel.indexOf(event.value),1)
+  this.selectedJobType.splice(this.selectedJobType.indexOf(event.value),1)
+  this.selectedSalary.splice(this.selectedSalary.indexOf(event.value),1)
+  
+}
+salaShow:boolean = false
+salaryClick(){
+this.salaShow = !this.salaShow
+}
   showDialog() {
     this.display = true;
   }
 }
+

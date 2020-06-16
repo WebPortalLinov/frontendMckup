@@ -22,10 +22,14 @@ const routes: Routes = [
       component:JobVacancyListComponent,
     },
     {
-      path:':uuid',
+      path:':detail',
       component:JobVacancyDetailComponent,
     }
   ]
+  },
+  {
+    path:'job-detail',
+    component:JobVacancyDetailComponent,
   },
   {
     path:'my-applications',
