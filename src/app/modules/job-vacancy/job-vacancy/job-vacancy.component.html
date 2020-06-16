@@ -9,145 +9,47 @@
       </div>
     </div>
 
-    <div class="btn-group">
-      <button type="button" class="btn btn-primary"><small>Location</small></button>
-      <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <span class="sr-only">Toggle Dropdown</span>
-      </button>
-      <div class="dropdown-menu">
-        <p class="container">Enter a location</p>
-        <hr>
-        <a class="dropdown-item" href="#">Jakarta</a>
-        <a class="dropdown-item" href="#">Tanggerang</a>
-        <a class="dropdown-item" href="#">Banten</a>
-        <a class="dropdown-item" href="#">Bandung</a>
-        <a class="dropdown-item" href="#">Yogyakarta</a>
-        <a class="dropdown-item" href="#">Surabaya</a>
-        <a class="dropdown-item" href="#">Medan</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#">Work Abroad</a>
-        <a class="dropdown-item" href="#">Work From Home</a>
-        <a class="dropdown-item" href="#">View All Location</a>
-      </div>
+    <div class="detail-job">
+      <p-multiSelect [options]="citys" [showHeader]=true [(ngModel)]="selectedCity" [defaultLabel]="'Location'"></p-multiSelect>
+      &nbsp;
+      <p-multiSelect [options]="jobLevel" [(ngModel)]="selectedJobLevel" [defaultLabel]="'Job Level'"></p-multiSelect>
+      &nbsp;
+      <p-multiSelect [options]="jobType" [(ngModel)]="selectedJobType" [defaultLabel]="'Job Type'"></p-multiSelect>
+      &nbsp;
+      <p-multiSelect [options]="employment" [(ngModel)]="selectedEmployment" [defaultLabel]="'Employment Type'"></p-multiSelect>
+      &nbsp;
+      <p-multiSelect [options]="jobFunction" [(ngModel)]="selectedJobFunction" [defaultLabel]="'Job Function'"></p-multiSelect>
+      &nbsp;
+      <p-multiSelect [options]="education" [(ngModel)]="selectedEducation" [defaultLabel]="'Education'"></p-multiSelect>
+      &nbsp;
+      <p-multiSelect [options]="company" [(ngModel)]="selectedCompany" [defaultLabel]="'Company'"></p-multiSelect>
+      &nbsp;
+      <p-dropdown [options]="salary" [(ngModel)]="selectedSalary" placeholder="Salary"></p-dropdown>
+      <br>
+      <Label>Location</Label>
+      <p-chips [(ngModel)]="selectedCity"></p-chips>
+      <Label>Job Level</Label>
+      <p-chips [(ngModel)]="selectedJobLevel"></p-chips>
+      <Label>Job Type</Label>
+      <p-chips [(ngModel)]="selectedJobType"></p-chips>
+      <Label>Employment</Label>
+      <p-chips [(ngModel)]="selectedEmployment"></p-chips>
+      <Label>Job Function</Label>
+      <p-chips [(ngModel)]="selectedJobFunction"></p-chips>
+      <Label>Education</Label>
+      <p-chips [(ngModel)]="selectedEducation"></p-chips>
+      <Label>Company</Label>
+      <p-chips [(ngModel)]="selectedCompany"></p-chips>
+      <Label>Salary</Label>
+      {{selectedSalary}}
+      
     </div>
-    &nbsp;
-    <div class="btn-group">
-      <button type="button" class="btn btn-primary"><small>Job Level</small></button>
-      <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <span class="sr-only">Toggle Dropdown</span>
-      </button>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#"><strong> All Job Level</strong></a>
-        <a class="dropdown-item" href="#">Internship / OJT</a>
-        <a class="dropdown-item" href="#">Entry Level / Junior Apprentice</a>
-        <a class="dropdown-item" href="#">Associate / Supervisor</a>
-        <a class="dropdown-item" href="#">Mid-Senior Level / Manager</a>
-        <a class="dropdown-item" href="#">Director / Executive</a>
-      </div>
-    </div>
-    &nbsp;
-    <div class="btn-group">
-      <button type="button" class="btn btn-primary"><small>Job Type</small></button>
-      <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <span class="sr-only">Toggle Dropdown</span>
-      </button>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#"><strong>All Job Types</strong></a>
-        <a class="dropdown-item" href="#">Full Time</a>
-        <a class="dropdown-item" href="#">Part-Time</a>
-      </div>
-    </div>    
-    &nbsp;
-    <div class="btn-group">
-      <button type="button" class="btn btn-primary"><small>Employment Type</small></button>
-      <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <span class="sr-only">Toggle Dropdown</span>
-      </button>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#"><strong>All Employment Types</strong></a>
-        <a class="dropdown-item" href="#">Permanent</a>
-        <a class="dropdown-item" href="#">Contract</a>
-        <a class="dropdown-item" href="#">Probation</a>
-      </div>
-    </div>    
-    &nbsp;
-    <div class="btn-group">
-      <button type="button" class="btn btn-primary"><small>Job Function</small></button>
-      <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <span class="sr-only">Toggle Dropdown</span>
-      </button>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#">Separated link</a>
-      </div>
-    </div>
-    &nbsp;
-    <div class="btn-group">
-      <button type="button" class="btn btn-primary"><small>Education</small></button>
-      <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <span class="sr-only">Toggle Dropdown</span>
-      </button>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#">Separated link</a>
-      </div>
-    </div>    
-    &nbsp;
-    <div class="btn-group">
-      <button type="button" class="btn btn-primary"><small>Company</small></button>
-      <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <span class="sr-only">Toggle Dropdown</span>
-      </button>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#">Separated link</a>
-      </div>
-    </div>
-    &nbsp;
-    <div class="btn-group">
-      <button type="button" class="btn btn-primary"><small>Salary</small></button>
-      <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <span class="sr-only">Toggle Dropdown</span>
-      </button>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#">Separated link</a>
-      </div>
-    </div>
-    <br>
-    <br>
-
-    <div class="location">
-      <span class="border border-white bStyle" style="font-size: 12px;">LOCATION | JAKARTA | X </span>
-      &nbsp;
-      <span class="border border-white bStyle" style="font-size: 12px;">JOB LEVEL | ENTRY LEVEL | X </span>
-      &nbsp;
-      <span class="border border-white bStyle" style="font-size: 12px;">JOB TYPE | FULL TIME | X </span>
-      &nbsp;
-      <span class="border border-white bStyle" style="font-size: 12px;">Employment TYPE | PERMANENT | X </span>
-      &nbsp;
-      <span class="border border-white bStyle" style="font-size: 12px;">JOB FUNCTION | IT AND SOFTWARE | X </span>
-      <br><br><br>
-      <span class="border border-white bStyle" style="font-size: 12px;">COMPANY | LAWENCON | X </span>
-      &nbsp;
-      <span class="border border-white bStyle" style="font-size: 12px;">MONTHLY SALARY | IDR 10,000,000 | X </span>
-      &nbsp;
-      <span class="border border-white bStyle" style="font-size: 12px;">EDUCATION | BACHELOR | X </span>
+    <div class="pull-right">
+      <button pButton 
+      type="button" label="Clear" 
+      class="ui-button-rounded ui-button-danger"></button>
     </div>
   </div>
-  <button type="button" class="btn bg-white cForVacancy">x clear</button>
 </div>
 
 <div class="container">
@@ -158,7 +60,7 @@
   </div>
 </div>
 
-  <div class="row">
+  <div class="row" style="margin-left: 6px;">
     <div class="section-body mt-3">
       <div class="container-fluid">
         <div class="row clearfix">
@@ -168,31 +70,33 @@
                   <table class="table table-hover table-striped table-vcenter mb-0">
                     <thead>
                     <tr>
-                      <th colspan="7" class="fontSize">1-10 of job vacancy matches</th>
+                      <th colspan="5" class="fontSize">1-10 of job vacancy matches</th>
                       <th colspan="1" class="fontSize"><a class="pi pi-sort-amount-down-alt">Applied Date&nbsp;</a></th>
                       <th colspan="1" class="fontSize"><a class="pi pi-sort-alpha-down">Alphabet&nbsp;</a>&nbsp; </th>
                       <th colspan="1" class="fontSize"><a class="pi pi-sort-amount-down-alt">Salary&nbsp;</a>&nbsp;</th>
                       <th colspan="1" class="fontSize"><a class="pi pi-sort-amount-down-alt">Expiry Date&nbsp;</a>&nbsp;</th>
                       <th colspan="1" class="fontSize"><a class="pi pi-sort-amount-down-alt">Posting Date</a></th>
+                      <th colspan="1" class="fontSize"><button><i class="pi pi-list"></i></button></th>
+                      <th colspan="1" class="fontSize"><button><i class="pi pi-bars"></i></button></th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
-                      <td>
+                      <td colspan="2">
                           <img class="fit-picture"
                           src="./assets/images/gallery/logo.jpg"
                           alt="Company Logo">
                       </td>
-                      <td colspan="5">
+                      <td colspan="7">
                           <a href="./detail" class="detail-job"><u>Java Programmer</u></a>
                           <br><span><small>Lawencon International</small></span>
                           <br><span><small>Jakarta, Indonesia</small></span>
                           <br><span><small> IDR 5,000,000-10,000,000</small></span>
                       </td>
-                      <td colspan="4">
+                      <!-- <td colspan="4">
                         <span class="d-flex flex-row" style="text-align: center;"></span>
-                      </td>
-                      <td colspan="2">
+                      </td> -->
+                      <td colspan="4">
                           <span>
                               <br><span><small>Posted 1 Month ago</small></span>
                               <br><span><small>appy before 25 feb</small></span>
@@ -204,21 +108,21 @@
                       </td>
                     </tr>
                     <tr>
-                      <td>
+                      <td colspan="2">
                           <img class="fit-picture"
                           src="./assets/images/gallery/logo.jpg"
                           alt="Company Logo">
                       </td>
-                      <td colspan="5">
+                      <td colspan="7">
                           <a href="./detail" class="detail-job"><u>Java Programmer</u></a>
                           <br><span><small>Lawencon International</small></span>
                           <br><span><small>Jakarta, Indonesia</small></span>
                           <br><span><small> IDR 5,000,000-10,000,000</small></span>
                       </td>
-                      <td colspan="4">
+                      <!-- <td colspan="4">
                         <span class="d-flex flex-row" style="text-align: center;"></span>
-                      </td>
-                      <td colspan="2">
+                      </td> -->
+                      <td colspan="4">
                           <span>
                               <br><span><small>Posted 1 Month ago</small></span>
                               <br><span><small>appy before 25 feb</small></span>
@@ -230,21 +134,21 @@
                       </td>
                     </tr>
                     <tr>
-                      <td>
+                      <td colspan="2">
                           <img class="fit-picture"
                           src="./assets/images/gallery/logo.jpg"
                           alt="Company Logo">
                       </td>
-                      <td colspan="5">
+                      <td colspan="7">
                           <a href="./detail" class="detail-job"><u>Java Programmer</u></a>
                           <br><span><small>Lawencon International</small></span>
                           <br><span><small>Jakarta, Indonesia</small></span>
                           <br><span><small> IDR 5,000,000-10,000,000</small></span>
                       </td>
-                      <td colspan="4">
+                      <!-- <td colspan="4">
                         <span class="d-flex flex-row" style="text-align: center;"></span>
-                      </td>
-                      <td colspan="2">
+                      </td> -->
+                      <td colspan="4">
                           <span>
                               <br><span><small>Posted 1 Month ago</small></span>
                               <br><span><small>appy before 25 feb</small></span>
@@ -256,21 +160,21 @@
                       </td>
                     </tr>
                     <tr>
-                      <td>
+                      <td colspan="2">
                           <img class="fit-picture"
                           src="./assets/images/gallery/logo.jpg"
                           alt="Company Logo">
                       </td>
-                      <td colspan="5">
+                      <td colspan="7">
                           <a href="./detail" class="detail-job"><u>Java Programmer</u></a>
                           <br><span><small>Lawencon International</small></span>
                           <br><span><small>Jakarta, Indonesia</small></span>
                           <br><span><small> IDR 5,000,000-10,000,000</small></span>
                       </td>
-                      <td colspan="4">
+                      <!-- <td colspan="4">
                         <span class="d-flex flex-row" style="text-align: center;"></span>
-                      </td>
-                      <td colspan="2">
+                      </td> -->
+                      <td colspan="4">
                           <span>
                               <br><span><small>Posted 1 Month ago</small></span>
                               <br><span><small>appy before 25 feb</small></span>
@@ -282,21 +186,21 @@
                       </td>
                     </tr>
                     <tr>
-                      <td>
+                      <td colspan="2">
                           <img class="fit-picture"
                           src="./assets/images/gallery/logo.jpg"
                           alt="Company Logo">
                       </td>
-                      <td colspan="5">
+                      <td colspan="7">
                           <a href="./detail" class="detail-job"><u>Java Programmer</u></a>
                           <br><span><small>Lawencon International</small></span>
                           <br><span><small>Jakarta, Indonesia</small></span>
                           <br><span><small> IDR 5,000,000-10,000,000</small></span>
                       </td>
-                      <td colspan="4">
+                      <!-- <td colspan="4">
                         <span class="d-flex flex-row" style="text-align: center;"></span>
-                      </td>
-                      <td colspan="2">
+                      </td> -->
+                      <td colspan="4">
                           <span>
                               <br><span><small>Posted 1 Month ago</small></span>
                               <br><span><small>appy before 25 feb</small></span>
@@ -315,19 +219,87 @@
           <div class="col-4">
             <div class="container">
               <div class="conGetEmail">
-                <a style="font-size: 10px;">get an email and notification when new jobs match this Search</a>
+                <button type="button" (click)="showDialog()" 
+                pButton icon="pi pi-bell" style="font-size: 12px;" label="Create Job Alert"></button>
+                <!-- <button (click)="showDialog()"><i class="pi pi-bell" style="font-size: 12px;">Create Job Alert</i></button> -->
+                <p-dialog header="Create Search Alert" [(visible)]="display" [style]="{width: '50vw'}" [baseZIndex]="20000">
+                  <p><strong><small>Programmer</small></strong></p>
+                  <p><small>Jakarta, Indonesia</small></p>
+                  <br>
+                  <p><small>Receive Alert</small></p>
+                  <p-dropdown [options]="alert" [(ngModel)]="selectedAlert" placeholder="Weekly"></p-dropdown>
+                  <br><br>
+                  <p><small>Get Notified Via</small></p>
+                  <p-dropdown [options]="getNotified" [(ngModel)]="selectedNotified" placeholder="Email and Notification"></p-dropdown>
+                  <p-footer>
+                    <button type="button" pButton icon="pi pi-undo" (click)="display=false" label="Cancel"></button>
+                    <button type="button" pButton icon="pi pi-save" (click)="display=false" label="Save" class="ui-button-secondary"></button>
+                  </p-footer>
+                </p-dialog>
+                <p style="font-size: 10px;">get an email and notification when new jobs match this Search</p>
               </div>
               <br><br><br>
-              <div>
-                <h1>Job Poster</h1>
+              <div class="card" style="box-sizing: border-box; text-align: center;">
+                <h3>Job Poster</h3>
               </div>
               <br><br><br>
-              <div>
-                <h3>Featured Jobs</h3>
+              <div class="card">
+                <div class="table-responsive">
+                  <table class="table table-hover table-striped table-vcenter mb-0">
+                    <thead>
+                      <tr>
+                        <th colspan="4" style="text-align: center; background-color: grey; color: black;">
+                          Featured Job
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <img class="fit-picture"
+                          src="./assets/images/gallery/logo.jpg"
+                          alt="Company Logo">
+                      </td>
+                      <td>
+                          <a href="./detail" class="detail-job"><u>Java Programmer</u></a>
+                          <br><span><small>Lawencon International</small></span>
+                          <br><span><small>Jakarta, Indonesia</small></span>
+                          <br><span><small> IDR 5,000,000-10,000,000</small></span>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <img class="fit-picture"
+                          src="./assets/images/gallery/logo.jpg"
+                          alt="Company Logo">
+                      </td>
+                      <td>
+                          <a href="./detail" class="detail-job"><u>Java Programmer</u></a>
+                          <br><span><small>Lawencon International</small></span>
+                          <br><span><small>Jakarta, Indonesia</small></span>
+                          <br><span><small> IDR 5,000,000-10,000,000</small></span>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <img class="fit-picture"
+                          src="./assets/images/gallery/logo.jpg"
+                          alt="Company Logo">
+                      </td>
+                      <td>
+                          <a href="./detail" class="detail-job"><u>Java Programmer</u></a>
+                          <br><span><small>Lawencon International</small></span>
+                          <br><span><small>Jakarta, Indonesia</small></span>
+                          <br><span><small> IDR 5,000,000-10,000,000</small></span>
+                      </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-8" style="align-self: center;">
+          <div class="col-4" style="align-self: center; margin-left: 15%;">
             <div class="container">
               <p-paginator [rows]="10" [totalRecords]="20" [rowsPerPageOptions]="[10,20,30]"></p-paginator>
             </div>

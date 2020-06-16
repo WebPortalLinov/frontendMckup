@@ -2,79 +2,94 @@
     <div class="section-body mt-3">
         <div class="container-fluid">
           <div class="row clearfix">
-            <!-- <div class="col-12">
-                <span class="d-flex flex-row" >
-                    <span colspan="7"><small>1-10 of job vacancy applied</small></span>
-                    <span colspan="2">
-                        <a class="pi pi-sort-amount-down-alt">Applied Date&nbsp;</a>
-                    </span>
-                    <span>
-                        <a class="pi pi-sort-alpha-down">Alphabet&nbsp;</a>&nbsp;
-                    </span>
-                    <span>
-                        <a class="pi pi-sort-amount-down-alt">Salary&nbsp;</a>&nbsp;
-                    </span>
-                    <span>
-                        <a class="pi pi-sort-amount-down-alt">Expiry Date&nbsp;</a>&nbsp;
-                    </span>
-                    <span>
-                        <a class="pi pi-sort-amount-down-alt">Posting Date</a>
-                    </span> 
+              <div class="col-12">
+                <span >
+                    <small>1-10 of job vacancy applied</small>
                 </span>
-            </div> -->
+                <span style="float:right;">
+                    <!-- <div style="text-align: right;"> -->
+                        <span>
+                            <!-- <a class="pi pi-sort-amount-down-alt">Applied Date&nbsp;</a> -->
+                            <a>Applied Date&nbsp;<i class="fa fa-sort-amount-asc"></i></a>
+                        </span>
+                        <span>
+                            <!-- <a class="fa fa-sort-alpha-asc">Alphabet&nbsp;</a>&nbsp; -->
+                            <a>&nbsp;&nbsp;&nbsp;&nbsp;Alphabet&nbsp;<i class="fa fa-sort-alpha-asc"></i></a>
+                        </span>
+                        <span>
+                            <!-- <a class="pi pi-sort-amount-down-alt">Salary&nbsp;</a>&nbsp; -->
+                            <a>&nbsp;&nbsp;&nbsp;&nbsp;Salary&nbsp; <i class="fa fa-sort-amount-asc"></i></a>
+                        </span>
+                        <span>
+                            <!-- <a class="pi pi-sort-amount-down-alt">Expiry Date&nbsp;</a>&nbsp; -->
+                            <a>&nbsp;&nbsp;&nbsp;&nbsp;Expiry Date&nbsp;<i class="fa fa-sort-amount-asc"></i></a>
+                        </span>
+                        <span>
+                            <!-- <a class="pi pi-sort-amount-down-alt">Posting Date</a> -->
+                            <a>&nbsp;&nbsp;&nbsp;&nbsp;Posting Date&nbsp; <i class="fa fa-sort-amount-asc"></i></a>
+                        </span> 
+                    <!-- </div> -->
+                </span>
+              </div>
             <div class="col-12">
                 <div class="card">
                   <div class="table-responsive">
                     <table class="table table-hover table-striped table-vcenter mb-0">
-                      <thead>
-                      <tr>
-                        <th colspan="8"><small>1-10 of job vacancy applied</small></th>
-                        <th colspan="1"><a class="pi pi-sort-amount-down-alt">Applied Date&nbsp;</a></th>
-                        <th colspan="1"><a class="pi pi-sort-alpha-down">Alphabet&nbsp;</a>&nbsp; </th>
-                        <th colspan="1"><a class="pi pi-sort-amount-down-alt">Salary&nbsp;</a>&nbsp;</th>
-                        <th colspan="1"><a class="pi pi-sort-amount-down-alt">Expiry Date&nbsp;</a>&nbsp;</th>
-                        <th colspan="1"><a class="pi pi-sort-amount-down-alt">Posting Date</a></th>
-                      </tr>
-                      </thead>
                       <tbody>
                       <tr>
                         <td colspan="2">
                             <img class="fit-picture"
-                            src="./assets/images/gallery/1.jpg"
+                            src="./assets/images/gallery/lawenlogo.jpg"
                             alt="Company Logo">
                         </td>
                         <td colspan="2">
                             <a href="./detail" class="detail-job"><u>Java Programmer</u></a>
-                            <br><span><small>Lawencon International</small></span>
+                            <br><span><small>PT Lawencon International</small></span>
                             <br><span><small>Jakarta, Indonesia</small></span>
                             <br><span><small> IDR 5,000,000-10,000,000</small></span>
                         </td>
                         <td colspan="8">
                                 <span class="d-flex flex-row" style="text-align: center;">
-                                    <div style="cursor: pointer;">
-                                        <i class="pi pi-file-o"></i> <br>
-                                        <small>Application</small>
-                                    </div>
-                                    <div style="cursor: pointer;">
-                                        <i class="pi pi-check-square"></i> <br>
-                                        <small>Asssesment</small>
-                                    </div>
-                                    <div style="cursor: pointer;">
-                                        <i class="pi pi-comments"></i> <br>
-                                        <small>Interview</small>
-                                    </div>
-                                    <div style="cursor: pointer;">
-                                        <i class="pi pi-money-bill"></i> <br>
-                                        <small>Offers</small>
-                                    </div>
-                                    <div style="cursor: pointer;">
-                                        <i class="pi pi-spinner"></i> <br>
-                                        <small>Onboarding</small>
-                                    </div>
-                                    <div style="cursor: pointer;">
-                                        <i class="pi pi-id-card"></i> <br>
-                                        <small> Hired</small>
-                                    </div>
+                                    <ul id="progressbar">
+                                        <li class="active" id="application"><small>Application</small></li>
+                                        <li id="assesment"><small>Assesment<br></small></li>
+                                        <li id="interview"><small>Interview<br></small></li>
+                                        <li id="offer"><small>Offers<br></small></li>
+                                        <li id="onboarding"><small>Onboarding<br></small></li>
+                                        <li id="hired"><small><br>Hired</small></li>
+                                    </ul>
+                                    <!-- <p-steps [model]="item" styleClass="steps-custom"></p-steps> -->
+                                        <!-- <div style="cursor: pointer;">
+                                            <i label="Application" class="pi pi-file-o" style="color: chartreuse;"><br>
+                                            <small>Application</small>
+                                            </i> 
+                                        </div>
+                                        <hr class="new2">
+                                        <div style="cursor: pointer;">
+                                            <i label="Assesment" class="pi pi-check-square" style="color: chartreuse;"><br>
+                                            <small>Assesment</small>
+                                            </i> 
+                                        </div><hr class="new2">
+                                        <div style="cursor: pointer;">
+                                            <i class="pi pi-comments"> <br>
+                                            <small>Interview</small>
+                                            </i>
+                                        </div><hr class="new2">
+                                        <div style="cursor: pointer;">
+                                            <i class="pi pi-money-bill"> <br>
+                                            <small>Offers</small>
+                                            </i>
+                                        </div><hr class="new2">
+                                        <div style="cursor: pointer;">
+                                            <i class="pi pi-spinner"><br>
+                                            <small>Onboarding</small>
+                                            </i> 
+                                        </div><hr class="new2">
+                                        <div style="cursor: pointer;">
+                                            <i class="pi pi-id-card"><br>
+                                            <small> Hired</small>
+                                            </i> 
+                                        </div> -->
                                 </span>
                         </td>
                         <td colspan="2">
@@ -88,42 +103,26 @@
                       <tr>
                         <td colspan="2">
                             <img class="fit-picture"
-                            src="./assets/images/gallery/2.jpg"
+                            src="./assets/images/gallery/lawenlogo.jpg"
                             alt="Company Logo">
                         </td>
                         <td colspan="2">
-                            <a href="./detail" class="detail-job"><u>Java Programmer</u></a>
-                            <br><span><small>Lawencon International</small></span>
+                            <a href="./detail" class="detail-job"><u>Business Analyst</u></a>
+                            <br><span><small>PT Lawencon International</small></span>
                             <br><span><small>Jakarta, Indonesia</small></span>
                             <br><span><small> IDR 5,000,000-10,000,000</small></span>
                         </td>
                         <td colspan="8">
-                                <span class="d-flex flex-row" style="text-align: center;">
-                                    <div style="cursor: pointer;">
-                                        <i class="pi pi-file-o"></i> <br>
-                                        <small>Application</small>
-                                    </div>
-                                    <div style="cursor: pointer;">
-                                        <i class="pi pi-check-square"></i> <br>
-                                        <small>Asssesment</small>
-                                    </div>
-                                    <div style="cursor: pointer;">
-                                        <i class="pi pi-comments"></i> <br>
-                                        <small>Interview</small>
-                                    </div>
-                                    <div style="cursor: pointer;">
-                                        <i class="pi pi-money-bill"></i> <br>
-                                        <small>Offers</small>
-                                    </div>
-                                    <div style="cursor: pointer;">
-                                        <i class="pi pi-spinner"></i> <br>
-                                        <small>Onboarding</small>
-                                    </div>
-                                    <div style="cursor: pointer;">
-                                        <i class="pi pi-id-card"></i> <br>
-                                        <small> Hired</small>
-                                    </div>
-                                </span>
+                            <span class="d-flex flex-row" style="text-align: center;">
+                                <ul id="progressbar">
+                                    <li class="active" id="application"><small>Application</small></li>
+                                    <li id="assesment"><small>Assesment<br></small></li>
+                                    <li id="interview"><small>Interview<br></small></li>
+                                    <li id="offer"><small>Offers<br></small></li>
+                                    <li id="onboarding"><small>Onboarding<br></small></li>
+                                    <li id="hired"><small><br>Hired</small></li>
+                                </ul>
+                            </span>
                         </td>
                         <td colspan="2">
                             <span>
@@ -136,42 +135,61 @@
                       <tr>
                         <td colspan="2">
                             <img class="fit-picture"
-                            src="./assets/images/gallery/3.jpg"
+                            src="./assets/images/gallery/lawenlogo.jpg"
                             alt="Company Logo">
                         </td>
                         <td colspan="2">
-                            <a href="./detail" class="detail-job"><u>Java Programmer</u></a>
-                            <br><span><small>Lawencon International</small></span>
+                            <a href="./detail" class="detail-job"><u>Full-stack Developer</u></a>
+                            <br><span><small>PT Lawencon International</small></span>
                             <br><span><small>Jakarta, Indonesia</small></span>
                             <br><span><small> IDR 5,000,000-10,000,000</small></span>
                         </td>
-                        <td colspan="8">
+                        <!-- <td colspan="8">
                                 <span class="d-flex flex-row" style="text-align: center;">
                                     <div style="cursor: pointer;">
-                                        <i class="pi pi-file-o"></i> <br>
+                                        <i label="Application" class="pi pi-file-o" style="color: chartreuse;"><br>
                                         <small>Application</small>
+                                        </i> 
                                     </div>
+                                    <hr class="new2">
                                     <div style="cursor: pointer;">
-                                        <i class="pi pi-check-square"></i> <br>
-                                        <small>Asssesment</small>
-                                    </div>
+                                        <i label="Assesment" class="pi pi-check-square" style="color: chartreuse;"><br>
+                                        <small>Assesment</small>
+                                        </i> 
+                                    </div><hr class="new2">
                                     <div style="cursor: pointer;">
-                                        <i class="pi pi-comments"></i> <br>
+                                        <i class="pi pi-comments"> <br>
                                         <small>Interview</small>
-                                    </div>
+                                        </i>
+                                    </div><hr class="new2">
                                     <div style="cursor: pointer;">
-                                        <i class="pi pi-money-bill"></i> <br>
+                                        <i class="pi pi-money-bill"> <br>
                                         <small>Offers</small>
-                                    </div>
+                                        </i>
+                                    </div><hr class="new2">
                                     <div style="cursor: pointer;">
-                                        <i class="pi pi-spinner"></i> <br>
+                                        <i class="pi pi-spinner"><br>
                                         <small>Onboarding</small>
-                                    </div>
+                                        </i> 
+                                    </div><hr class="new2">
                                     <div style="cursor: pointer;">
-                                        <i class="pi pi-id-card"></i> <br>
+                                        <i class="pi pi-id-card"><br>
                                         <small> Hired</small>
+                                        </i> 
                                     </div>
                                 </span>
+                        </td> -->
+                        <td colspan="8">
+                            <span class="d-flex flex-row" style="text-align: center;">
+                                <ul id="progressbar">
+                                    <li class="active" id="application"><small>Application</small></li>
+                                    <li id="assesment"><small>Assesment<br></small></li>
+                                    <li id="interview"><small>Interview<br></small></li>
+                                    <li id="offer"><small>Offers<br></small></li>
+                                    <li id="onboarding"><small>Onboarding<br></small></li>
+                                    <li id="hired"><small><br>Hired</small></li>
+                                </ul>
+                            </span>
                         </td>
                         <td colspan="2">
                             <span>
@@ -184,42 +202,26 @@
                       <tr>
                         <td colspan="2">
                             <img class="fit-picture"
-                            src="./assets/images/gallery/4.jpg"
+                            src="./assets/images/gallery/lawenlogo.jpg"
                             alt="Company Logo">
                         </td>
                         <td colspan="2">
-                            <a href="./detail" class="detail-job"><u>Java Programmer</u></a>
-                            <br><span><small>Lawencon International</small></span>
+                            <a href="./detail" class="detail-job"><u>Angular Developer</u></a>
+                            <br><span><small>PT Lawencon International</small></span>
                             <br><span><small>Jakarta, Indonesia</small></span>
                             <br><span><small> IDR 5,000,000-10,000,000</small></span>
                         </td>
                         <td colspan="8">
-                                <span class="d-flex flex-row" style="text-align: center;">
-                                    <div style="cursor: pointer;">
-                                        <i class="pi pi-file-o"></i> <br>
-                                        <small>Application</small>
-                                    </div>
-                                    <div style="cursor: pointer;">
-                                        <i class="pi pi-check-square"></i> <br>
-                                        <small>Asssesment</small>
-                                    </div>
-                                    <div style="cursor: pointer;">
-                                        <i class="pi pi-comments"></i> <br>
-                                        <small>Interview</small>
-                                    </div>
-                                    <div style="cursor: pointer;">
-                                        <i class="pi pi-money-bill"></i> <br>
-                                        <small>Offers</small>
-                                    </div>
-                                    <div style="cursor: pointer;">
-                                        <i class="pi pi-spinner"></i> <br>
-                                        <small>Onboarding</small>
-                                    </div>
-                                    <div style="cursor: pointer;">
-                                        <i class="pi pi-id-card"></i> <br>
-                                        <small> Hired</small>
-                                    </div>
-                                </span>
+                            <span class="d-flex flex-row" style="text-align: center;">
+                                <ul id="progressbar">
+                                    <li class="active" id="application"><small>Application</small></li>
+                                    <li id="assesment"><small>Assesment<br></small></li>
+                                    <li id="interview"><small>Interview<br></small></li>
+                                    <li id="offer"><small>Offers<br></small></li>
+                                    <li id="onboarding"><small>Onboarding<br></small></li>
+                                    <li id="hired"><small><br>Hired</small></li>
+                                </ul>
+                            </span>
                         </td>
                         <td colspan="2">
                             <span>
@@ -232,42 +234,58 @@
                       <tr>
                         <td colspan="2">
                             <img class="fit-picture"
-                            src="./assets/images/gallery/5.jpg"
+                            src="./assets/images/gallery/lawenlogo.jpg"
                             alt="Company Logo">
                         </td>
                         <td colspan="2">
-                            <a href="./detail" class="detail-job"><u>Java Programmer</u></a>
-                            <br><span><small>Lawencon International</small></span>
+                            <a href="./detail" class="detail-job"><u>Back-end Developer</u></a>
+                            <br><span><small>PT Lawencon International</small></span>
                             <br><span><small>Jakarta, Indonesia</small></span>
                             <br><span><small> IDR 5,000,000-10,000,000</small></span>
                         </td>
                         <td colspan="8">
-                                <span class="d-flex flex-row" style="text-align: center;">
-                                    <div style="cursor: pointer;">
-                                        <i class="pi pi-file-o"></i> <br>
-                                        <small>Application</small>
-                                    </div>
-                                    <div style="cursor: pointer;">
-                                        <i class="pi pi-check-square"></i> <br>
-                                        <small>Asssesment</small>
-                                    </div>
-                                    <div style="cursor: pointer;">
-                                        <i class="pi pi-comments"></i> <br>
-                                        <small>Interview</small>
-                                    </div>
-                                    <div style="cursor: pointer;">
-                                        <i class="pi pi-money-bill"></i> <br>
-                                        <small>Offers</small>
-                                    </div>
-                                    <div style="cursor: pointer;">
-                                        <i class="pi pi-spinner"></i> <br>
-                                        <small>Onboarding</small>
-                                    </div>
-                                    <div style="cursor: pointer;">
-                                        <i class="pi pi-id-card"></i> <br>
-                                        <small> Hired</small>
-                                    </div>
-                                </span>
+                            <span class="d-flex flex-row" style="text-align: center;">
+                                <ul id="progressbar">
+                                    <li class="active" id="application"><small>Application</small></li>
+                                    <li id="assesment"><small>Assesment<br></small></li>
+                                    <li id="interview"><small>Interview<br></small></li>
+                                    <li id="offer"><small>Offers<br></small></li>
+                                    <li id="onboarding"><small>Onboarding<br></small></li>
+                                    <li id="hired"><small><br>Hired</small></li>
+                                </ul>
+                            </span>
+                        </td>
+                        <td colspan="2">
+                            <span>
+                                <button type="button" pButton icon="pi pi-trash" style="border-color: black;"label="WITHDRAW" class="ui-button-secondary"(click)="showDialog()"></button>
+                                <br><span><small><b>viewed 3 times</b></small></span>
+                                <br><span><small>applied 3 months ago</small></span>
+                            </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="2">
+                            <img class="fit-picture"
+                            src="./assets/images/gallery/lawenlogo.jpg"
+                            alt="Company Logo">
+                        </td>
+                        <td colspan="2">
+                            <a  id="closedApp" href="./detail" class="detail-job"><u>Full-stack Developer</u></a>&nbsp;<small>CLOSED</small>
+                            <br><span><small>PT Lawencon International</small></span>
+                            <br><span><small>Jakarta, Indonesia</small></span>
+                            <br><span><small> IDR 5,000,000-10,000,000</small></span>
+                        </td>
+                        <td colspan="8">
+                            <span class="d-flex flex-row" style="text-align: center;">
+                                <ul id="progressbar">
+                                    <li class="active" id="application"><small>Application</small></li>
+                                    <li id="assesment"><small>Assesment<br></small></li>
+                                    <li id="interview"><small>Interview<br></small></li>
+                                    <li id="offer"><small>Offers<br></small></li>
+                                    <li id="onboarding"><small>Onboarding<br></small></li>
+                                    <li id="hired"><small><br>Hired</small></li>
+                                </ul>
+                            </span>
                         </td>
                         <td colspan="2">
                             <span>
@@ -306,6 +324,5 @@
       <button type="button" pButton icon="pi pi-trash" (click)="display=false" label="WITHDRAW"></button> 
     </p-footer>
 </p-dialog>
-
 
 

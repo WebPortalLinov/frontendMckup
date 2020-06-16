@@ -63,4 +63,22 @@
 
 .detail-alert{
   font-size: medium;
+  font-weight: bolder;
+}
+
+/* Style buttons */
+.btn {
+  background-color: white; /* Blue background */
+  border: 1px solid black; /* Remove borders */
+  color: black; /* White text */
+  padding: 5px 18px; /* Some padding */
+  font-size: 10px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+  // font-family: FontAwesome;
+  // content: "\f014"
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: red;
 }

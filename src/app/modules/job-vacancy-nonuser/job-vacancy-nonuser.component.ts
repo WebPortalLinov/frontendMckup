@@ -7,13 +7,12 @@ import { onConstructTableHeader } from 'app/shared/utils/construct-table-header'
 import {SelectItem} from 'primeng/api';
 
 @Component({
-  selector: 'app-job-vacancy',
-  templateUrl: './job-vacancy.component.html',
-  styleUrls: ['./job-vacancy.component.scss']
+  selector: 'app-job-vacancy-nonuser',
+  templateUrl: './job-vacancy-nonuser.component.html',
+  styleUrls: ['./job-vacancy-nonuser.component.scss']
 })
+export class JobVacancyNonuserComponent implements OnInit {
 
-
-export class JobVacancyComponent implements OnInit {
   myAppDetailsColumn: TableColumn[];
   rowsPerPage = Paginator.rowsPerPage;
   rowsPerPageOptions = Paginator.rowsPerPageOptions;
@@ -72,8 +71,7 @@ export class JobVacancyComponent implements OnInit {
   getNotified: SelectItem[];
   selectedNotified: string[] = [];
   notifiedItems: SelectItem[];
-  
-  constructor() { 
+  constructor() {
     this.myAppDetailsColumn = onConstructTableHeader([
       'Logo',
       'Job',
@@ -242,10 +240,11 @@ export class JobVacancyComponent implements OnInit {
     for (let i = 0; i < 10000; i++) {
         this.salaryItems.push({label: 'Item ' + i, value: 'Item ' + i});
     }
-  }
+   }
 
   ngOnInit() {
-}
+  }
+
   showDialog() {
     this.display = true;
   }

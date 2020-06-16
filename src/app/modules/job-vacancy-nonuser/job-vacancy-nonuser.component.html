@@ -1,0 +1,310 @@
+<div class="container">
+    <div class="jumbotron">
+      <div class="img-fluid"> 
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Search for Job Vacancy Title, Company or Location " aria-label="Recipient's username" aria-describedby="basic-addon2">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button">Search</button>
+          </div>
+        </div>
+      </div>
+  
+      <div class="detail-job">
+        <p-multiSelect [options]="citys" [showHeader]=true [(ngModel)]="selectedCity" [defaultLabel]="'Location'"></p-multiSelect>
+        &nbsp;
+        <p-multiSelect [options]="jobLevel" [(ngModel)]="selectedJobLevel" [defaultLabel]="'Job Level'"></p-multiSelect>
+        &nbsp;
+        <p-multiSelect [options]="jobType" [(ngModel)]="selectedJobType" [defaultLabel]="'Job Type'"></p-multiSelect>
+        &nbsp;
+        <p-multiSelect [options]="employment" [(ngModel)]="selectedEmployment" [defaultLabel]="'Employment Type'"></p-multiSelect>
+        &nbsp;
+        <p-multiSelect [options]="jobFunction" [(ngModel)]="selectedJobFunction" [defaultLabel]="'Job Function'"></p-multiSelect>
+        &nbsp;
+        <p-multiSelect [options]="education" [(ngModel)]="selectedEducation" [defaultLabel]="'Education'"></p-multiSelect>
+        &nbsp;
+        <p-multiSelect [options]="company" [(ngModel)]="selectedCompany" [defaultLabel]="'Company'"></p-multiSelect>
+        &nbsp;
+        <p-dropdown [options]="salary" [(ngModel)]="selectedSalary" placeholder="Salary"></p-dropdown>
+        <br>
+        <Label>Location</Label>
+        <p-chips [(ngModel)]="selectedCity"></p-chips>
+        <Label>Job Level</Label>
+        <p-chips [(ngModel)]="selectedJobLevel"></p-chips>
+        <Label>Job Type</Label>
+        <p-chips [(ngModel)]="selectedJobType"></p-chips>
+        <Label>Employment</Label>
+        <p-chips [(ngModel)]="selectedEmployment"></p-chips>
+        <Label>Job Function</Label>
+        <p-chips [(ngModel)]="selectedJobFunction"></p-chips>
+        <Label>Education</Label>
+        <p-chips [(ngModel)]="selectedEducation"></p-chips>
+        <Label>Company</Label>
+        <p-chips [(ngModel)]="selectedCompany"></p-chips>
+        <Label>Salary</Label>
+        {{selectedSalary}}
+        
+      </div>
+      <div class="pull-right">
+        <button pButton 
+        type="button" label="Clear" 
+        class="ui-button-rounded ui-button-danger"></button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="row">
+      <div>
+        <a style="margin-left: 20px;"><strong>RECOMMENDED JOBS</strong></a>
+      </div>
+    </div>
+  </div>
+  
+    <div class="row" style="margin-left: 6px;">
+      <div class="section-body mt-3">
+        <div class="container-fluid">
+          <div class="row clearfix">
+            <div class="col-8">
+                <div class="card">
+                  <div class="table-responsive">
+                    <table class="table table-hover table-striped table-vcenter mb-0">
+                      <thead>
+                      <tr>
+                        <th colspan="5" class="fontSize">1-10 of job vacancy matches</th>
+                        <th colspan="1" class="fontSize"><a class="pi pi-sort-amount-down-alt">Applied Date&nbsp;</a></th>
+                        <th colspan="1" class="fontSize"><a class="pi pi-sort-alpha-down">Alphabet&nbsp;</a>&nbsp; </th>
+                        <th colspan="1" class="fontSize"><a class="pi pi-sort-amount-down-alt">Salary&nbsp;</a>&nbsp;</th>
+                        <th colspan="1" class="fontSize"><a class="pi pi-sort-amount-down-alt">Expiry Date&nbsp;</a>&nbsp;</th>
+                        <th colspan="1" class="fontSize"><a class="pi pi-sort-amount-down-alt">Posting Date</a></th>
+                        <th colspan="1" class="fontSize"><button><i class="pi pi-list"></i></button></th>
+                        <th colspan="1" class="fontSize"><button><i class="pi pi-bars"></i></button></th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                        <td colspan="2">
+                            <img class="fit-picture"
+                            src="./assets/images/gallery/logo.jpg"
+                            alt="Company Logo">
+                        </td>
+                        <td colspan="7">
+                            <a href="./detail" class="detail-job"><u>Java Programmer</u></a>
+                            <br><span><small>Lawencon International</small></span>
+                            <br><span><small>Jakarta, Indonesia</small></span>
+                            <br><span><small> IDR 5,000,000-10,000,000</small></span>
+                        </td>
+                        <!-- <td colspan="4">
+                          <span class="d-flex flex-row" style="text-align: center;"></span>
+                        </td> -->
+                        <td colspan="4">
+                            <span>
+                                <br><span><small>Posted 1 Month ago</small></span>
+                                <br><span><small>appy before 25 feb</small></span>
+                                <br><br>
+                                <button type="button" class="bg-primary" style="font-size: 12px; border-radius: 12px; color:white; padding: 5px; ">SAVED</button>
+                                &nbsp;
+                                <button type="button" class="btn btn-primary" style="font-size: 12px; border-radius: 12px; color:white; padding: 5px; ">APPLY</button>
+                            </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="2">
+                            <img class="fit-picture"
+                            src="./assets/images/gallery/logo.jpg"
+                            alt="Company Logo">
+                        </td>
+                        <td colspan="7">
+                            <a href="./detail" class="detail-job"><u>Java Programmer</u></a>
+                            <br><span><small>Lawencon International</small></span>
+                            <br><span><small>Jakarta, Indonesia</small></span>
+                            <br><span><small> IDR 5,000,000-10,000,000</small></span>
+                        </td>
+                        <!-- <td colspan="4">
+                          <span class="d-flex flex-row" style="text-align: center;"></span>
+                        </td> -->
+                        <td colspan="4">
+                            <span>
+                                <br><span><small>Posted 1 Month ago</small></span>
+                                <br><span><small>appy before 25 feb</small></span>
+                                <br><br>
+                                <button type="button" class="bg-primary" style="font-size: 12px; border-radius: 12px; color:white; padding: 5px; ">SAVED</button>
+                                &nbsp;
+                                <button type="button" class="btn btn-primary" style="font-size: 12px; border-radius: 12px; color:white; padding: 5px; ">APPLY</button>
+                            </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="2">
+                            <img class="fit-picture"
+                            src="./assets/images/gallery/logo.jpg"
+                            alt="Company Logo">
+                        </td>
+                        <td colspan="7">
+                            <a href="./detail" class="detail-job"><u>Java Programmer</u></a>
+                            <br><span><small>Lawencon International</small></span>
+                            <br><span><small>Jakarta, Indonesia</small></span>
+                            <br><span><small> IDR 5,000,000-10,000,000</small></span>
+                        </td>
+                        <!-- <td colspan="4">
+                          <span class="d-flex flex-row" style="text-align: center;"></span>
+                        </td> -->
+                        <td colspan="4">
+                            <span>
+                                <br><span><small>Posted 1 Month ago</small></span>
+                                <br><span><small>appy before 25 feb</small></span>
+                                <br><br>
+                                <button type="button" class="bg-primary" style="font-size: 12px; border-radius: 12px; color:white; padding: 5px; ">SAVED</button>
+                                &nbsp;
+                                <button type="button" class="btn btn-primary" style="font-size: 12px; border-radius: 12px; color:white; padding: 5px; ">APPLY</button>
+                            </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="2">
+                            <img class="fit-picture"
+                            src="./assets/images/gallery/logo.jpg"
+                            alt="Company Logo">
+                        </td>
+                        <td colspan="7">
+                            <a href="./detail" class="detail-job"><u>Java Programmer</u></a>
+                            <br><span><small>Lawencon International</small></span>
+                            <br><span><small>Jakarta, Indonesia</small></span>
+                            <br><span><small> IDR 5,000,000-10,000,000</small></span>
+                        </td>
+                        <!-- <td colspan="4">
+                          <span class="d-flex flex-row" style="text-align: center;"></span>
+                        </td> -->
+                        <td colspan="4">
+                            <span>
+                                <br><span><small>Posted 1 Month ago</small></span>
+                                <br><span><small>appy before 25 feb</small></span>
+                                <br><br>
+                                <button type="button" class="bg-primary" style="font-size: 12px; border-radius: 12px; color:white; padding: 5px; ">SAVED</button>
+                                &nbsp;
+                                <button type="button" class="btn btn-primary" style="font-size: 12px; border-radius: 12px; color:white; padding: 5px; ">APPLY</button>
+                            </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="2">
+                            <img class="fit-picture"
+                            src="./assets/images/gallery/logo.jpg"
+                            alt="Company Logo">
+                        </td>
+                        <td colspan="7">
+                            <a href="./detail" class="detail-job"><u>Java Programmer</u></a>
+                            <br><span><small>Lawencon International</small></span>
+                            <br><span><small>Jakarta, Indonesia</small></span>
+                            <br><span><small> IDR 5,000,000-10,000,000</small></span>
+                        </td>
+                        <!-- <td colspan="4">
+                          <span class="d-flex flex-row" style="text-align: center;"></span>
+                        </td> -->
+                        <td colspan="4">
+                            <span>
+                                <br><span><small>Posted 1 Month ago</small></span>
+                                <br><span><small>appy before 25 feb</small></span>
+                                <br><br>
+                                <button type="button" class="bg-primary" style="font-size: 12px; border-radius: 12px; color:white; padding: 5px; ">SAVED</button>
+                                &nbsp;
+                                <button type="button" class="btn btn-primary" style="font-size: 12px; border-radius: 12px; color:white; padding: 5px; ">APPLY</button>
+                            </span>
+                        </td>
+                      </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+            </div>
+            <div class="col-4">
+              <div class="container">
+                <div class="conGetEmail">
+                  <button type="button" (click)="showDialog()" 
+                  pButton icon="pi pi-bell" style="font-size: 12px;" label="Create Job Alert"></button>
+                  <!-- <button (click)="showDialog()"><i class="pi pi-bell" style="font-size: 12px;">Create Job Alert</i></button> -->
+                  <p-dialog header="Create Search Alert" [(visible)]="display" [style]="{width: '50vw'}" [baseZIndex]="20000">
+                    <p><strong><small>Programmer</small></strong></p>
+                    <p><small>Jakarta, Indonesia</small></p>
+                    <br>
+                    <p><small>Receive Alert</small></p>
+                    <p-dropdown [options]="alert" [(ngModel)]="selectedAlert" placeholder="Weekly"></p-dropdown>
+                    <br><br>
+                    <p><small>Get Notified Via</small></p>
+                    <p-dropdown [options]="getNotified" [(ngModel)]="selectedNotified" placeholder="Email and Notification"></p-dropdown>
+                    <p-footer>
+                      <button type="button" pButton icon="pi pi-undo" (click)="display=false" label="Cancel"></button>
+                      <button type="button" pButton icon="pi pi-save" (click)="display=false" label="Save" class="ui-button-secondary"></button>
+                    </p-footer>
+                  </p-dialog>
+                  <p style="font-size: 10px;">get an email and notification when new jobs match this Search</p>
+                </div>
+                <br><br><br>
+                <div class="card" style="box-sizing: border-box; text-align: center;">
+                  <h3>Job Poster</h3>
+                </div>
+                <br><br><br>
+                <div class="card">
+                  <div class="table-responsive">
+                    <table class="table table-hover table-striped table-vcenter mb-0">
+                      <thead>
+                        <tr>
+                          <th colspan="4" style="text-align: center; background-color: grey; color: black;">
+                            Featured Job
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <img class="fit-picture"
+                            src="./assets/images/gallery/logo.jpg"
+                            alt="Company Logo">
+                        </td>
+                        <td>
+                            <a href="./detail" class="detail-job"><u>Java Programmer</u></a>
+                            <br><span><small>Lawencon International</small></span>
+                            <br><span><small>Jakarta, Indonesia</small></span>
+                            <br><span><small> IDR 5,000,000-10,000,000</small></span>
+                        </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <img class="fit-picture"
+                            src="./assets/images/gallery/logo.jpg"
+                            alt="Company Logo">
+                        </td>
+                        <td>
+                            <a href="./detail" class="detail-job"><u>Java Programmer</u></a>
+                            <br><span><small>Lawencon International</small></span>
+                            <br><span><small>Jakarta, Indonesia</small></span>
+                            <br><span><small> IDR 5,000,000-10,000,000</small></span>
+                        </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <img class="fit-picture"
+                            src="./assets/images/gallery/logo.jpg"
+                            alt="Company Logo">
+                        </td>
+                        <td>
+                            <a href="./detail" class="detail-job"><u>Java Programmer</u></a>
+                            <br><span><small>Lawencon International</small></span>
+                            <br><span><small>Jakarta, Indonesia</small></span>
+                            <br><span><small> IDR 5,000,000-10,000,000</small></span>
+                        </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-4" style="align-self: center; margin-left: 15%;">
+              <div class="container">
+                <p-paginator [rows]="10" [totalRecords]="20" [rowsPerPageOptions]="[10,20,30]"></p-paginator>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
