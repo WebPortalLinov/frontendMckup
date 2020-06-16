@@ -106,7 +106,8 @@
                             <label for="">Select the timezone</label>
                         </div>
                         <div class="ui-grid-row">
-                            <p-autoComplete [(ngModel)]="timezone" [(suggestions)]="resultsTimezone" (completeMethod)="searchTimezone($event)" [dropdown]="true" placeholder="Timezone" styleClass="wid100">
+                            <p-autoComplete [(ngModel)]="timezone" [(suggestions)]="resultsTimezone" (completeMethod)="searchTimezone($event)" [dropdown]="true" placeholder="Timezone"
+                            [size]="40" [minLength]="1">
                                 <ng-template let-timezone pTemplate="item">
                                     <div class="ui-helper-clearfix">
                                         {{timezone}}

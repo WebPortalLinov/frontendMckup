@@ -59,8 +59,16 @@ export class RegisterComponent implements OnInit {
 
     }
 
-    get username() {
-        return this.loginForm.get('username');
+    // get username() {
+    //     return this.loginForm.get('username');
+    // }
+
+    get name() {
+        return this.loginForm.get('name');
+    }
+
+    get email() {
+        return this.loginForm.get('email');
     }
 
     get password() {
@@ -72,13 +80,15 @@ export class RegisterComponent implements OnInit {
      */
     private createForm() {
         this.loginForm = this.formBuilder.group({
-            username: [
-                '',
-                [
-                    Validators.required,
-                    Validators.pattern(new RegExp(/^[a-zA-Z0-9]*$/)),
-                ],
-            ],
+            name: ['', Validators.required],
+            email: ['', Validators.required],
+            // username: [
+            //     '',
+            //     [
+            //         Validators.required,
+            //         Validators.pattern(new RegExp(/^[a-zA-Z0-9]*$/)),
+            //     ],
+            // ],
             password: ['', Validators.required],
             // 'g-recaptcha-response': [''],
         });
@@ -99,11 +109,12 @@ export class RegisterComponent implements OnInit {
 
         loginForm.isEss = false;
         loginForm.applicationId = AppConstant.applicationId;
+        this.router.navigate(['/job-vacancy']);
 
-        this.apiService.postLogin('login', loginForm).subscribe(
-            (resp: Session) => {
-                this.authService.createSession(resp);
-                console.log('resp login', resp);
+        // this.apiService.postLogin('login', loginForm).subscribe(
+        //     (resp: Session) => {
+        //         this.authService.createSession(resp);
+        //         console.log('resp login', resp);
                 // this._connect();
                 // this.socket.connect.subscribe((res) => {
                 //     this._connect()
@@ -114,29 +125,29 @@ export class RegisterComponent implements OnInit {
                 // })
 
                 //get general setting
-                const currCompanyId = this.authService.getSession().selectedCompanyId;
-                this.apiService.get('company/' + currCompanyId).subscribe((resp) => {
-                    console.log("company", resp);
-                    this.authService.createGeneralSetting(resp);
-                })
+            //     const currCompanyId = this.authService.getSession().selectedCompanyId;
+            //     this.apiService.get('company/' + currCompanyId).subscribe((resp) => {
+            //         console.log("company", resp);
+            //         this.authService.createGeneralSetting(resp);
+            //     })
 
-                this.router.navigate(['/dashboard']);
-            },
-            (err) => {
-                this.errorMsg = err;
-                this.onRevert();
-            },
-            () => {
-                this.onRevert();
-            },
-        );
+                
+            // },
+            // (err) => {
+            //     this.errorMsg = err;
+            //     this.onRevert();
+            // },
+            // () => {
+            //     this.onRevert();
+            // },
+        // );
     }
 
     /**
      *  Reset form
      */
     onRevert() {
-        this.loginForm.reset({ username: '', password: '' });
+        this.loginForm.reset({ name: '', email: '', password: '' });
         this.isLoading = false;
         // this.recaptcha.reset();
     }
