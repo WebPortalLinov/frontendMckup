@@ -68,10 +68,11 @@
       <div class="ui-g-3" *ngIf="salaShow">
         
       </div> -->
-      <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid">
       <div class="ui-g-12">
-        <p-chips [(ngModel)]="selChip" (onRemove)="selChipRemove($event)"></p-chips>
-      </div>
+        <div class="chip" *ngFor="let item of selChip; let i = index">
+          {{item}} 
+          <button class="btn" (click)="delete(i)"><i class="fa fa-times"></i></button>
+        </div>
       </div>
     </div>
     <div class="pull-right">

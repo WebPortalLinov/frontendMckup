@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { onConstructTableHeader } from 'app/shared/utils';
 import { TableColumn } from 'app/shared/models/table.interface';
 import { round } from 'lodash-es';
@@ -11,7 +11,8 @@ export interface completed {
 @Component({
   selector: 'app-my-profile',
   templateUrl: './my-profile.component.html',
-  styleUrls: ['./my-profile.component.sass']
+  styleUrls: ['./my-profile.component.sass'],
+  encapsulation:ViewEncapsulation.None
 })
 export class MyProfileComponent implements OnInit {
 
