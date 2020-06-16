@@ -17,7 +17,7 @@
         &nbsp;
         <p-multiSelect [options]="jobType" (onChange)="changeCity(event)" [displaySelectedLabel]=false [(ngModel)]="selectedJobType" [defaultLabel]="'Job Type'"></p-multiSelect>
         &nbsp;
-        <p-multiSelect [options]="employment" (onChange)="changeCity(event)" [displaySelectedLabel]=false [(ngModel)]="selectedEmployment" [defaultLabel]="'Employment Type'"></p-multiSelect>
+        <p-multiSelect [options]="employment" (onChange)="changeCity(event)" [displaySelectedLabel]=false [(ngModel)]="selectedEmployement" [defaultLabel]="'Employment Type'"></p-multiSelect>
         &nbsp;
         <p-multiSelect [options]="jobFunction" (onChange)="changeCity(event)" [displaySelectedLabel]=false [(ngModel)]="selectedJobFunction" [defaultLabel]="'Job Function'"></p-multiSelect>
         &nbsp;
@@ -25,17 +25,49 @@
         &nbsp;
         <p-multiSelect [options]="company" (onChange)="changeCity(event)" [displaySelectedLabel]=false [(ngModel)]="selectedCompany" [defaultLabel]="'Company'"></p-multiSelect>
         &nbsp;
-        <p-splitButton class="split-color split-font split-height split-height2 drop-height align-left font-color icon-color" 
-        [style]="{width: '103px'}" styleClass="ui-button-info" label="Salary" 
-        (onDropdownClick)="salaryClick()" [model]="items"></p-splitButton>
+        <div class="row" style="margin: 1px; margin-top: 12px;">
+          <p-splitButton class="split-color split-font split-height split-height2 drop-height align-left font-color icon-color" 
+          [style]="{width: '103px'}" styleClass="ui-button-info" label="Salary" 
+          (onDropdownClick)="salaryClick()" [model]="items"></p-splitButton>
+          <p-card [style]="{width: '260px'}" *ngIf="salaShow">
+            <div>
+              <div class="row" style="font-size: small;">
+                <div class="col ui-g-4">
+                  <p-radioButton name="group1" value="Hourly" label="Hourly"></p-radioButton>
+                </div>
+                <div class="col ui-g-4">
+                  <p-radioButton name="group1" value="Monthly" label="Monthly"></p-radioButton>
+                </div>
+                <div class="col ui-g-4">
+                  <p-radioButton name="group1" value="Yearly" label="Yearly"></p-radioButton>
+                </div> 
+              </div>
+              <div>
+                <div class="row">
+                  <div class="col ui-g-1">
+                    <p-dropdown [style]="{width: '2px'}" [options]="salary" [(ngModel)]="selectedSalary"></p-dropdown>
+                  </div>
+                  <div class="ui-g-11">
+                    <div class="p-field">
+                      <label for="fieldId"></label>
+                      <input id="fieldId" type="text" pInputText> 
+                  </div>
+                  <div class="pull-right" style="margin-top: 15px; margin-bottom: 0;">
+                    <button type="button" pButton 
+                    style="border-color: black; font-size: 10px;" 
+                    label="Apply" class="ui-button-secondary"(click)="display=false"></button>
+                  </div>
+                  </div>
+                </div>
+              </div>  
+            </div>
+          </p-card>
+        </div>
       </div>
-      <div class="ui-g-9"></div>
+      <!-- <div class="ui-g-9"></div>
       <div class="ui-g-3" *ngIf="salaShow">
-        <p-card header="Simple Card" [style]="{width: '360px'}">
-          <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
-              quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</div>
-        </p-card>
-      </div>
+        
+      </div> -->
       <div class="ui-grid ui-grid-responsive ui-grid-pad ui-fluid">
       <div class="ui-g-12">
         <p-chips [(ngModel)]="selChip" (onRemove)="selChipRemove($event)"></p-chips>
@@ -44,7 +76,7 @@
     </div>
     <div class="pull-right">
       <button pButton 
-      type="button" label="Clear" 
+      type="button" label="Clear" (click)="removeChip(); selChipRemove($event)"
       class="ui-button-rounded ui-button-danger"></button>
     </div>
   </div>
@@ -102,9 +134,8 @@
                               <br><span><small>Posted 1 Month ago</small></span>
                               <br><span><small>appy before 25 feb</small></span>
                               <br><br>
-                              <button type="button" class="bg-primary" style="font-size: 12px; border-radius: 12px; color:white; padding: 5px; ">SAVED</button>
-                              &nbsp;
-                              <button type="button" class="btn btn-primary" style="font-size: 12px; border-radius: 12px; color:white; padding: 5px; ">APPLY</button>
+                              <button type="button" pButton icon="pi pi-heart" style="border-color: black; font-size: 10px; "label="SAVE" class="ui-button-secondary"(click)="showDialog()"></button>
+                              <button type="button" pButton icon="pi pi-check" style="border-color: black; font-size: 10px; "label="APPLY" class="ui-button-secondary"(click)="showDialog()"></button>
                           </span>
                       </td>
                     </tr>
@@ -115,7 +146,7 @@
                           alt="Company Logo">
                       </td>
                       <td colspan="7">
-                          <a href="./detail" class="detail-job"><u>Java Programmer</u></a>
+                          <a href="./job-detail" class="detail-job"><u>Bussiness Analyst</u></a>
                           <br><span><small>Lawencon International</small></span>
                           <br><span><small>Jakarta, Indonesia</small></span>
                           <br><span><small> IDR 5,000,000-10,000,000</small></span>
@@ -128,9 +159,8 @@
                               <br><span><small>Posted 1 Month ago</small></span>
                               <br><span><small>appy before 25 feb</small></span>
                               <br><br>
-                              <button type="button" class="bg-primary" style="font-size: 12px; border-radius: 12px; color:white; padding: 5px; ">SAVED</button>
-                              &nbsp;
-                              <button type="button" class="btn btn-primary" style="font-size: 12px; border-radius: 12px; color:white; padding: 5px; ">APPLY</button>
+                              <button type="button" pButton icon="pi pi-heart" style="border-color: black; font-size: 10px; "label="SAVE" class="ui-button-secondary"(click)="showDialog()"></button>
+                              <button type="button" pButton icon="pi pi-check" style="border-color: black; font-size: 10px; "label="APPLY" class="ui-button-secondary"(click)="showDialog()"></button>
                           </span>
                       </td>
                     </tr>
@@ -141,7 +171,7 @@
                           alt="Company Logo">
                       </td>
                       <td colspan="7">
-                          <a href="./detail" class="detail-job"><u>Java Programmer</u></a>
+                          <a href="./job-detail" class="detail-job"><u>Full-Stack Developer</u></a>
                           <br><span><small>Lawencon International</small></span>
                           <br><span><small>Jakarta, Indonesia</small></span>
                           <br><span><small> IDR 5,000,000-10,000,000</small></span>
@@ -154,9 +184,8 @@
                               <br><span><small>Posted 1 Month ago</small></span>
                               <br><span><small>appy before 25 feb</small></span>
                               <br><br>
-                              <button type="button" class="bg-primary" style="font-size: 12px; border-radius: 12px; color:white; padding: 5px; ">SAVED</button>
-                              &nbsp;
-                              <button type="button" class="btn btn-primary" style="font-size: 12px; border-radius: 12px; color:white; padding: 5px; ">APPLY</button>
+                              <button type="button" pButton icon="pi pi-heart" style="border-color: black; font-size: 10px; "label="SAVE" class="ui-button-secondary"(click)="showDialog()"></button>
+                              <button type="button" pButton icon="pi pi-check" style="border-color: black; font-size: 10px; "label="APPLY" class="ui-button-secondary"(click)="showDialog()"></button>
                           </span>
                       </td>
                     </tr>
@@ -167,7 +196,7 @@
                           alt="Company Logo">
                       </td>
                       <td colspan="7">
-                          <a href="./detail" class="detail-job"><u>Java Programmer</u></a>
+                          <a href="./job-detail" class="detail-job"><u>Angular Developer</u></a>
                           <br><span><small>Lawencon International</small></span>
                           <br><span><small>Jakarta, Indonesia</small></span>
                           <br><span><small> IDR 5,000,000-10,000,000</small></span>
@@ -180,9 +209,8 @@
                               <br><span><small>Posted 1 Month ago</small></span>
                               <br><span><small>appy before 25 feb</small></span>
                               <br><br>
-                              <button type="button" class="bg-primary" style="font-size: 12px; border-radius: 12px; color:white; padding: 5px; ">SAVED</button>
-                              &nbsp;
-                              <button type="button" class="btn btn-primary" style="font-size: 12px; border-radius: 12px; color:white; padding: 5px; ">APPLY</button>
+                              <button type="button" pButton icon="pi pi-heart" style="border-color: black; font-size: 10px; "label="SAVE" class="ui-button-secondary"(click)="showDialog()"></button>
+                              <button type="button" pButton icon="pi pi-check" style="border-color: black; font-size: 10px; "label="APPLY" class="ui-button-secondary"(click)="showDialog()"></button>
                           </span>
                       </td>
                     </tr>
@@ -193,7 +221,7 @@
                           alt="Company Logo">
                       </td>
                       <td colspan="7">
-                          <a href="./detail" class="detail-job"><u>Java Programmer</u></a>
+                          <a href="./job-detail" class="detail-job"><u>Backend Developer</u></a>
                           <br><span><small>Lawencon International</small></span>
                           <br><span><small>Jakarta, Indonesia</small></span>
                           <br><span><small> IDR 5,000,000-10,000,000</small></span>
@@ -206,9 +234,8 @@
                               <br><span><small>Posted 1 Month ago</small></span>
                               <br><span><small>appy before 25 feb</small></span>
                               <br><br>
-                              <button type="button" class="bg-primary" style="font-size: 12px; border-radius: 12px; color:white; padding: 5px; ">SAVED</button>
-                              &nbsp;
-                              <button type="button" class="btn btn-primary" style="font-size: 12px; border-radius: 12px; color:white; padding: 5px; ">APPLY</button>
+                              <button type="button" pButton icon="pi pi-heart" style="border-color: black; font-size: 10px; "label="SAVE" class="ui-button-secondary"(click)="showDialog()"></button>
+                              <button type="button" pButton icon="pi pi-check" style="border-color: black; font-size: 10px; "label="APPLY" class="ui-button-secondary"(click)="showDialog()"></button>
                           </span>
                       </td>
                     </tr>
@@ -223,12 +250,13 @@
                 <button type="button" (click)="showDialog()" 
                 pButton icon="pi pi-bell" style="font-size: 12px;" label="Create Job Alert"></button>
                 <!-- <button (click)="showDialog()"><i class="pi pi-bell" style="font-size: 12px;">Create Job Alert</i></button> -->
-                <p-dialog header="Create Search Alert" [(visible)]="display" [style]="{width: '50vw'}" [baseZIndex]="20000">
+                <p-dialog header="Create Search Alert" 
+                [(visible)]="display" [style]="{width: '20vw'}" [baseZIndex]="10000">
                   <p><strong><small>Programmer</small></strong></p>
                   <p><small>Jakarta, Indonesia</small></p>
                   <br>
                   <p><small>Receive Alert</small></p>
-                  <p-dropdown [options]="alert" [(ngModel)]="selectedAlert" placeholder="Weekly"></p-dropdown>
+                  <p-dropdown [options]="alert" [(ngModel)]="selectedAlert" placeholder="Weekly" [style]="{'width':'50px'}"></p-dropdown>
                   <br><br>
                   <p><small>Get Notified Via</small></p>
                   <p-dropdown [options]="getNotified" [(ngModel)]="selectedNotified" placeholder="Email and Notification"></p-dropdown>
@@ -275,7 +303,7 @@
                           alt="Company Logo">
                       </td>
                       <td>
-                          <a href="./detail" class="detail-job"><u>Java Programmer</u></a>
+                          <a href="./detail" class="detail-job"><u>Bussiness Analyst</u></a>
                           <br><span><small>Lawencon International</small></span>
                           <br><span><small>Jakarta, Indonesia</small></span>
                           <br><span><small> IDR 5,000,000-10,000,000</small></span>
@@ -288,7 +316,7 @@
                           alt="Company Logo">
                       </td>
                       <td>
-                          <a href="./detail" class="detail-job"><u>Java Programmer</u></a>
+                          <a href="./detail" class="detail-job"><u>Full-Stack Developer</u></a>
                           <br><span><small>Lawencon International</small></span>
                           <br><span><small>Jakarta, Indonesia</small></span>
                           <br><span><small> IDR 5,000,000-10,000,000</small></span>
