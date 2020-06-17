@@ -274,6 +274,21 @@ changeCity(event){
     this.selectedJobType,
     this.selectedSalary)
 }
+
+delete(i){
+  let event = this.selChip[i]
+  
+  this.selectedCity.splice(this.selectedCity.indexOf(event),1)
+  this.selectedCompany.splice(this.selectedCompany.indexOf(event),1)
+  this.selectedEducation.splice(this.selectedEducation.indexOf(event),1)
+  this.selectedEmployement.splice(this.selectedEmployement.indexOf(event),1)
+  this.selectedJobFunction.splice(this.selectedJobFunction.indexOf(event),1)
+  this.selectedJobLevel.splice(this.selectedJobLevel.indexOf(event),1)
+  this.selectedJobType.splice(this.selectedJobType.indexOf(event),1)
+  this.selectedSalary.splice(this.selectedSalary.indexOf(event),1)
+
+  this.selChip.splice(i,1)
+}
 selChipRemove(event){
   console.log("event", event);
   console.log("idx",this.selectedCity.indexOf(event.value));
