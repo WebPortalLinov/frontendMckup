@@ -33,11 +33,11 @@
                       <tr>
                         <!-- <td colspan="2">
                             <img class="fit-picture"
-                            src="./assets/images/gallery/lawenlogo.jpg"
+                            src="./assets/images/gallery/defaultLogo.jpg"
                             alt="Company Logo">
                         </td> -->
                         <td colspan="2">
-                            <a href="./detail" class="detail-job"><u>Java Programmer</u></a>
+                            <a [routerLink]="'/detail'" class="detail-job"><u>Java Programmer</u></a>
                             <br><span><small>PT Lawencon International</small></span>
                             <br><span><small>Jakarta, Indonesia</small></span>
                             <br><span><small> IDR 5,000,000-10,000,000</small></span>
@@ -66,11 +66,11 @@
                       <tr>
                         <!-- <td colspan="2">
                             <img class="fit-picture"
-                            src="./assets/images/gallery/lawenlogo.jpg"
+                            src="./assets/images/gallery/defaultLogo.jpg"
                             alt="Company Logo">
                         </td> -->
                         <td colspan="2">
-                            <a href="./detail" class="detail-job"><u>Business Analyst</u></a>
+                            <a [routerLink]="'/detail'" class="detail-job"><u>Business Analyst</u></a>
                             <br><span><small>PT Lawencon International</small></span>
                             <br><span><small>Jakarta, Indonesia</small></span>
                             <br><span><small> IDR 5,000,000-10,000,000</small></span>
@@ -99,11 +99,11 @@
                       <tr>
                         <!-- <td colspan="2">
                             <img class="fit-picture"
-                            src="./assets/images/gallery/lawenlogo.jpg"
+                            src="./assets/images/gallery/defaultLogo.jpg"
                             alt="Company Logo">
                         </td> -->
                         <td colspan="2">
-                            <a href="./detail" class="detail-job"><u>Full-stack Developer</u></a>
+                            <a [routerLink]="'/detail'" class="detail-job"><u>Full-stack Developer</u></a>
                             <br><span><small>PT Lawencon International</small></span>
                             <br><span><small>Jakarta, Indonesia</small></span>
                             <br><span><small> IDR 5,000,000-10,000,000</small></span>
@@ -167,11 +167,11 @@
                       <tr>
                         <!-- <td colspan="2">
                             <img class="fit-picture"
-                            src="./assets/images/gallery/lawenlogo.jpg"
+                            src="./assets/images/gallery/defaultLogo.jpg"
                             alt="Company Logo">
                         </td> -->
                         <td colspan="2">
-                            <a href="./detail" class="detail-job"><u>Angular Developer</u></a>
+                            <a [routerLink]="'/detail'" class="detail-job"><u>Angular Developer</u></a>
                             <br><span><small>PT Lawencon International</small></span>
                             <br><span><small>Jakarta, Indonesia</small></span>
                             <br><span><small> IDR 5,000,000-10,000,000</small></span>
@@ -201,11 +201,11 @@
                       <tr>
                         <!-- <td colspan="2">
                             <img class="fit-picture"
-                            src="./assets/images/gallery/lawenlogo.jpg"
+                            src="./assets/images/gallery/defaultLogo.jpg"
                             alt="Company Logo">
                         </td> -->
                         <td colspan="2">
-                            <a href="./detail" class="detail-job"><u>Back-end Developer</u></a>
+                            <a [routerLink]="'/detail'" class="detail-job"><u>Back-end Developer</u></a>
                             <br><span><small>PT Lawencon International</small></span>
                             <br><span><small>Jakarta, Indonesia</small></span>
                             <br><span><small> IDR 5,000,000-10,000,000</small></span>
@@ -234,11 +234,11 @@
                       <tr>
                         <!-- <td colspan="2">
                             <img class="fit-picture"
-                            src="./assets/images/gallery/lawenlogo.jpg"
+                            src="./assets/images/gallery/defaultLogo.jpg"
                             alt="Company Logo">
                         </td> -->
                         <td colspan="2">
-                            <a  id="closedApp" href="./detail" class="detail-job"><u>Full-stack Developer</u></a>&nbsp;<small>CLOSED</small>
+                            <a  id="closedApp" [routerLink]="'/detail'" class="detail-job"><u>Full-stack Developer</u></a>&nbsp;<small>CLOSED</small>
                             <br><span><small>PT Lawencon International</small></span>
                             <br><span><small>Jakarta, Indonesia</small></span>
                             <br><span><small> IDR 5,000,000-10,000,000</small></span>
@@ -295,4 +295,4 @@
     </p-footer>
   </p-dialog>
 
-
+<router-outlet></router-outlet>

@@ -64,8 +64,8 @@
       </div>
       <div class="ui-g-12">
         <div class="chip" *ngFor="let item of selChip; let i = index">
-          {{item}} 
-          <button class="btn" (click)="delete(i)"><i class="fa fa-times"></i></button>
+          <label style="vertical-align: middle; padding-bottom: 8px;"> {{item}} </label>
+          <button class="btn" style="margin-top: -15px;" (click)="delete(i)"><i class="fa fa-times"></i></button>
         </div>
       </div>
     </div>
@@ -147,11 +147,11 @@
                     <tr>
                       <td colspan="2">
                           <img class="fit-picture"
-                          src="./assets/images/gallery/logo.jpg"
+                          src="./assets/images/gallery/defaultLogo.jpg"
                           alt="Company Logo">
                       </td>
                       <td colspan="7" >
-                          <a href="./job-detail" class="detail-job"><u>Java Programmer</u></a>
+                          <a [routerLink]="'/job-detail'" class="detail-job"><u>Java Programmer</u></a>
                           <br><span><small>Lawencon International</small></span>
                           <br><span><small>Jakarta, Indonesia</small></span>
                           <br><span><small> IDR 5,000,000-10,000,000</small></span>
@@ -169,11 +169,11 @@
                     <tr>
                       <td colspan="2">
                           <img class="fit-picture"
-                          src="./assets/images/gallery/logo.jpg"
+                          src="./assets/images/gallery/defaultLogo.jpg"
                           alt="Company Logo">
                       </td>
                       <td colspan="7">
-                          <a href="./job-detail" class="detail-job"><u>Bussiness Analyst</u></a>
+                          <a [routerLink]="'/job-detail'" class="detail-job"><u>Bussiness Analyst</u></a>
                           <br><span><small>Lawencon International</small></span>
                           <br><span><small>Jakarta, Indonesia</small></span>
                           <br><span><small> IDR 5,000,000-10,000,000</small></span>
@@ -191,11 +191,11 @@
                     <tr>
                       <td colspan="2">
                           <img class="fit-picture"
-                          src="./assets/images/gallery/logo.jpg"
+                          src="./assets/images/gallery/defaultLogo.jpg"
                           alt="Company Logo">
                       </td>
                       <td colspan="7">
-                          <a href="./job-detail" class="detail-job"><u>Full-Stack Developer</u></a>
+                          <a [routerLink]="'/job-detail'" class="detail-job"><u>Full-Stack Developer</u></a>
                           <br><span><small>Lawencon International</small></span>
                           <br><span><small>Jakarta, Indonesia</small></span>
                           <br><span><small> IDR 5,000,000-10,000,000</small></span>
@@ -213,11 +213,11 @@
                     <tr>
                       <td colspan="2">
                           <img class="fit-picture"
-                          src="./assets/images/gallery/logo.jpg"
+                          src="./assets/images/gallery/defaultLogo.jpg"
                           alt="Company Logo">
                       </td>
                       <td colspan="7">
-                          <a href="./job-detail" class="detail-job"><u>Angular Developer</u></a>
+                          <a [routerLink]="'/job-detail'" class="detail-job"><u>Angular Developer</u></a>
                           <br><span><small>Lawencon International</small></span>
                           <br><span><small>Jakarta, Indonesia</small></span>
                           <br><span><small> IDR 5,000,000-10,000,000</small></span>
@@ -235,11 +235,11 @@
                     <tr>
                       <td colspan="2">
                           <img class="fit-picture"
-                          src="./assets/images/gallery/logo.jpg"
+                          src="./assets/images/gallery/defaultLogo.jpg"
                           alt="Company Logo">
                       </td>
                       <td colspan="7">
-                          <a href="./job-detail" class="detail-job"><u>Backend Developer</u></a>
+                          <a [routerLink]="'/job-detail'" class="detail-job"><u>Backend Developer</u></a>
                           <br><span><small>Lawencon International</small></span>
                           <br><span><small>Jakarta, Indonesia</small></span>
                           <br><span><small> IDR 5,000,000-10,000,000</small></span>
@@ -264,3 +264,4 @@
     </div>
   </div>
 </div>
+<router-outlet></router-outlet>
