@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { onConstructTableHeader } from 'app/shared/utils';
 import { TableColumn } from 'app/shared/models/table.interface';
 import { Family } from 'app/shared/models/recruitment-candidate.interface';
+import { ViewEncapsulation } from '@angular/compiler/src/core';
 
 export interface familyMembers{
   name;

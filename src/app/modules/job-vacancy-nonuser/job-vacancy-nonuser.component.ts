@@ -5,6 +5,7 @@ import { FormGroup } from '@angular/forms';
 import { SelectItemGroup } from 'primeng/components/common/selectitemgroup';
 import { onConstructTableHeader } from 'app/shared/utils/construct-table-header';
 import {SelectItem} from 'primeng/api';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-job-vacancy-nonuser',
@@ -84,6 +85,8 @@ export class JobVacancyNonuserComponent implements OnInit {
   getNotified: SelectItem[];
   selectedNotified: string[] = [];
   notifiedItems: SelectItem[]; 
+
+  constructor(private router: Router){}
 
   ngOnInit() {
     this.myAppDetailsColumn = onConstructTableHeader([
@@ -297,10 +300,14 @@ export class JobVacancyNonuserComponent implements OnInit {
   }
   salaShow:boolean = false
   salaryClick(){
-  this.salaShow = !this.salaShow
+    this.salaShow = !this.salaShow
+  }
+
+  redirectLogin(){
+    this.router.navigate(['home/login/'])
   }
   
-    showDialog() {
-      this.display = true;
-    }
-  }  
+  showDialog() {
+    this.display = true;
+  }
+}  
