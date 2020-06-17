@@ -55,4 +55,17 @@ export class SavedJobsComponent implements OnInit {
   showDialog() {
     this.display = true;
   }
+
+  myFunction(x) {
+    x.classList.toggle("fas fa-check-circle");
+  }
+
+  change( el )
+{
+    if ( el.value === "APPLY" )
+        el.value = "APPLIED";
+    else
+        el.value = "APPLIED";
+}
+
 }

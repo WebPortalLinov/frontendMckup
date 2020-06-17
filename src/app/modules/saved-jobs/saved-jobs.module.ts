@@ -6,7 +6,7 @@ import { DetailComponent } from './detail/detail.component';
 import { ListComponent } from './list/list.component';
 import { ButtonModule } from 'primeng/button';
 import { PaginatorModule } from 'primeng/paginator';
-import { DialogModule, CardModule, PanelModule, CarouselModule } from 'primeng/primeng';
+import { DialogModule, CardModule, PanelModule, CarouselModule, MessagesModule } from 'primeng/primeng';
 
 @NgModule({
   declarations: [SavedJobsComponent, DetailComponent, ListComponent],
@@ -18,6 +18,7 @@ import { DialogModule, CardModule, PanelModule, CarouselModule } from 'primeng/p
     CardModule,
     PanelModule,
     CarouselModule,
+    MessagesModule,
     ButtonModule
   ]
 })
