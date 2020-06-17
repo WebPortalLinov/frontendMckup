@@ -68,8 +68,8 @@
       </div> -->
       <div class="ui-g-12">
         <div class="chip" *ngFor="let item of selChip; let i = index">
-          {{item}} 
-          <button class="btn" (click)="delete(i)"><i class="fa fa-times"></i></button>
+          <label style="vertical-align: middle; padding-bottom: 8px;"> {{item}} </label>
+          <button class="btn" style="margin-top: -15px;" (click)="delete(i)"><i class="fa fa-times"></i></button>
         </div>
       </div>
     </div>
